@@ -96,6 +96,30 @@
         }
       }
     },
+    "aws": {
+      "type": "object",
+      "required" : ["accessKeyId", "accessSecret", "hostedZoneId"],
+      "properties": {
+        "accessKeyId": {
+          "type": "string",
+          "format": "password",
+          "title": "AWS Access Key for Route 53 Access",
+          "description": "AWS Access Key for Route 53 Access"
+        },
+        "accessSecret": {
+          "type": "string",
+          "format": "password",
+          "title": "AWS Secret for Route 53 Access",
+          "description": "AWS Secret for Route 53 Access"
+        },
+        "hostedZoneId": {
+          "type": "string",
+          "format": "password",
+          "title": "Route 53 zone id",
+          "description": "AWS Secret for Route 53 Access"
+        }
+      }
+    },
     "enableDocker": {
       "type": "boolean",
       "title": "Do you want to configure an external Docker Registry?",

@@ -31,5 +31,14 @@ spec:
         route53:
           region: {{ .Values.cluster.region }}
 {{- end }}
+{{- if eq .Values.cluster.provider "minikube" }}
+        route53:
+          region: us-east-1
+          hostedZoneID: {{ .Values.aws.hostedZoneId}}
+          accessKeyID: {{ .Values.aws.accessKeyId}}
+          secretAccessKeySecretRef:
+            name: cert-manager-aws-creds
+            key: accessSecret
+{{- end }}
 {{- end }}
 {{- end }}
