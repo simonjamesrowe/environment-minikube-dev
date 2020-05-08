@@ -1,0 +1,14 @@
+adminUser:
+  password: local:simonjamesrowe/adminUser:password
+  username: admin
+aws:
+  accessKeyId: local:simonjamesrowe/aws:accessKeyId
+  accessSecret: local:simonjamesrowe/aws:accessSecret
+  hostedZoneId: local:simonjamesrowe/aws:hostedZoneId
+enableDocker: false
+pipelineUser:
+  email: simon@simonjamesrowe.com
+  token: local:simonjamesrowe/pipelineUser:token
+  username: simonrowe-bot
+prow:
+  hmacToken: local:simonjamesrowe/prow:hmacToken

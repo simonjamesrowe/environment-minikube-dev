@@ -9,6 +9,8 @@ pipelineConfig:
         - name: pr-checks
           options:
             containerOptions:
+              name: ""
+              resources: {}
               volumeMounts:
               - mountPath: /builder/home/.jx/localSecrets/currentCluster
                 name: local-secrets
@@ -44,6 +46,8 @@ pipelineConfig:
         - name: release
           options:
             containerOptions:
+              name: ""
+              resources: {}
               volumeMounts:
               - mountPath: /builder/home/.jx/localSecrets/currentCluster
                 name: local-secrets
@@ -122,6 +126,15 @@ pipelineConfig:
           - args:
             - step
             - create
+            - values
+            - --name
+            - parameters
+            command: jx
+            dir: /workspace/source/env
+            name: create-helm-values
+          - args:
+            - step
+            - create
             - install
             - values
             - -b
@@ -169,6 +182,17 @@ pipelineConfig:
             name: install-cert-manager
           - args:
             - step
+            - create
+            - templated
+            - --parameters-file=../../env/parameters.yaml
+            - --requirements-dir=../../
+            - --template-file=cert-manager-aws-secret.tmpl.yaml
+            - --config-file=templates/cert-manager-aws-secret.yaml
+            command: jx
+            dir: /workspace/source/systems/acme
+            name: create-acme-config-aws-secrets
+          - args:
+            - step
             - helm
             - apply
             - --boot
@@ -188,15 +212,6 @@ pipelineConfig:
             command: jx
             dir: /workspace/source/systems/vault
             name: install-vault
-          - args:
-            - step
-            - create
-            - values
-            - --name
-            - parameters
-            command: jx
-            dir: /workspace/source/env
-            name: create-helm-values
           - args:
             - step
             - create

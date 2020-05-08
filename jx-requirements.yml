@@ -1,25 +1,64 @@
+autoUpdate:
+  enabled: false
+  schedule: ""
+bootConfigURL: https://github.com/simonjamesrowe/environment-minikube-dev
 cluster:
-  clusterName: ""
-  environmentGitOwner: ""
-  environmentGitPublic: false
-  project: ""
-  provider: gke
-  zone: ""
-gitops: true
+  clusterName: simonjamesrowe
+  devEnvApprovers:
+  - simonrowe
+  environmentGitOwner: simonjamesrowe
+  gitKind: github
+  gitName: github
+  gitServer: https://github.com
+  namespace: jx
+  provider: minikube
 environments:
-- key: dev
-- key: staging
-- key: production
+- ingress:
+    domain: simonjamesrowe.com
+    externalDNS: false
+    namespaceSubDomain: dev
+    tls:
+      email: simon.rowe@gmail.com
+      enabled: true
+      production: true
+  key: dev
+  repository: environment-simonjamesrowe-dev
+- ingress:
+    domain: simonjamesrowe.com
+    externalDNS: false
+    namespaceSubDomain: staging
+    tls:
+      email: simon.rowe@gmail.com
+      enabled: true
+      production: true
+  key: staging
+  repository: environment-simonjamesrowe-staging
+- ingress:
+    domain: simon.rowe@gmail.com
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: simon.rowe@gmail.com
+      enabled: true
+      production: true
+  key: production
+  repository: environment-simonjamesrowe-production
+gitops: true
 ingress:
-  domain: ""
+  domain: simonrowe.com
   externalDNS: false
+  namespaceSubDomain: -jx.
   tls:
-    email: ""
-    enabled: false
-    production: false
+    email: simon.rowe@gmail.com
+    enabled: true
+    production: true
 kaniko: true
+repository: nexus
 secretStorage: local
 storage:
+  backup:
+    enabled: false
+    url: ""
   logs:
     enabled: false
     url: ""
@@ -29,7 +68,11 @@ storage:
   repository:
     enabled: false
     url: ""
+vault: {}
+velero:
+  schedule: ""
+  ttl: ""
 versionStream:
-  ref: "master"
+  ref: v1.0.446
   url: https://github.com/jenkins-x/jenkins-x-versions.git
 webhook: prow
