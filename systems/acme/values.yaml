@@ -1,0 +1,13 @@
+cluster:
+  domain: simonrowe.com
+  projectID: ""
+  region: ""
+certmanager:
+  production: "true"
+  email:  "simon.rowe@gmail.com"
+  enabled: true
+
+aws:
+  accessKeyId: "local:simonjamesrowe/aws:accessKeyId"
+  accessSecret:  "local:simonjamesrowe/aws:accessSecret"
+  hostedZoneId: "local:simonjamesrowe/aws:hostedZoneId"

@@ -42,6 +42,14 @@ pipelineConfig:
         environment:
         - name: DEPLOY_NAMESPACE
           value: jx
+        - name: GIT_AUTHOR_NAME
+          value: simonrowe-bot
+        - name: GIT_COMMITTER_NAME
+          value: simonrowe-bot
+        - name: GIT_AUTHOR_EMAIL
+          value: simon@simonjamesrowe.com
+        - name: GIT_COMMITTER_EMAIL
+          value: simon@simonjamesrowe.com
         stages:
         - name: release
           options:

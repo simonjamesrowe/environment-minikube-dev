@@ -14,13 +14,13 @@ cluster:
   provider: minikube
 environments:
 - ingress:
-    domain: ""
+    domain: simonrowe.com
     externalDNS: false
-    namespaceSubDomain: ""
+    namespaceSubDomain: -jx.
     tls:
-      email: ""
-      enabled: false
-      production: false
+      email: simon.rowe@gmail.com
+      enabled: true
+      production: true
   key: dev
   repository: environment-simonjamesrowe-dev
 - ingress:
