@@ -13,9 +13,36 @@ cluster:
   namespace: jx
   provider: minikube
 environments:
-- key: dev
-- key: staging
-- key: production
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: dev
+  repository: environment-simonjamesrowe-dev
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: staging
+  repository: environment-simonjamesrowe-staging
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: production
+  repository: environment-simonjamesrowe-production
 gitops: true
 ingress:
   domain: simonrowe.com
