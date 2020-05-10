@@ -186,11 +186,11 @@ pipelineConfig:
             - templated
             - --parameters-file=../../env/parameters.yaml
             - --requirements-dir=../../
-            - --template-file=cert-manager-aws-secret.tmpl.yaml
-            - --config-file=templates/cert-manager-aws-secret.yaml
+            - --template-file=conf/vals.tmpl.yaml
+            - --config-file=values.yaml
             command: jx
             dir: /workspace/source/systems/acme
-            name: create-acme-config-aws-secrets
+            name: create-acme-config
           - args:
             - step
             - helm

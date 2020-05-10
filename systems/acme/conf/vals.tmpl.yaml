@@ -10,3 +10,7 @@ certmanager:
   enabled: {{ .Requirements.ingress.tls.enabled }}
 {{- end }}
 
+aws:
+  accessKeyId: "{{ .Parameters.aws.accessKeyId }}"
+  accessSecret:  "{{ .Parameters.aws.accessSecret }}"
+  hostedZoneId: "{{ .Parameters.aws.hostedZoneId }}"
