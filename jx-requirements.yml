@@ -15,7 +15,7 @@ cluster:
   provider: minikube
 environments:
 - ingress:
-    domain: simonrowe.com
+    domain: simonjamesrowe.com
     externalDNS: false
     namespaceSubDomain: -jx.
     tls:
@@ -46,7 +46,7 @@ environments:
   repository: environment-simonjamesrowe-production
 gitops: true
 ingress:
-  domain: simonrowe.com
+  domain: simonjamesrowe.com
   externalDNS: false
   namespaceSubDomain: -jx.
   tls:
