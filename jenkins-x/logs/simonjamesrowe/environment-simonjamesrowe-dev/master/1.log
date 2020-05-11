@@ -1,0 +1,254 @@
+
+Showing logs for build [32msimonjamesrowe-environment-simo-rljkv-1[0m stage [32mrelease[0m and container [32mstep-credential-initializer-vvbl2[0m
+{"level":"info","ts":1589183730.7200983,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1589183730.721511,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32msimonjamesrowe-environment-simo-rljkv-1[0m stage [32mrelease[0m and container [32mstep-working-dir-initializer-nkj2c[0m
+{"level":"info","ts":1589183731.3175764,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1589183731.318588,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32msimonjamesrowe-environment-simo-rljkv-1[0m stage [32mrelease[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32msimonjamesrowe-environment-simo-rljkv-1[0m stage [32mrelease[0m and container [32mstep-git-source-simonjamesrowe-environment-simo-rljkv-d5nst[0m
+{"level":"info","ts":1589183740.2935503,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1589183741.7201273,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/simonjamesrowe/environment-simonjamesrowe-dev.git @ v1.0.85 in path /workspace/source"}
+
+Showing logs for build [32msimonjamesrowe-environment-simo-rljkv-1[0m stage [32mrelease[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:fca347a18c5969fcbfe64e65fd696e0daa79a607
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32msimonjamesrowe-environment-simo-rljkv-1[0m stage [32mrelease[0m and container [32mstep-validate-git[0m
+Git configured for user: jenkins-x-bot and email jenkins-x@googlegroups.com
+
+Showing logs for build [32msimonjamesrowe-environment-simo-rljkv-1[0m stage [32mrelease[0m and container [32mstep-verify-preinstall[0m
+** boot has only been validated on GKE and EKS, we'd love feedback and contributions for other Kubernetes providers
+Running in Batch Mode, execution will continue
+writing the following to the OWNERS file for the development environment repository:
+approvers:
+- simonrowe
+reviewers:
+- simonrowe
+The provided requirements file has 'strictPermissions' enabled but 'provider' is not Openshift.
+This feature is only supported on Openshift
+Verifying the kubernetes cluster before we try to boot Jenkins X in namespace: **
+Trying to lazily create any missing resources to get the current cluster ready to boot Jenkins X
+Verifying Ingress...
+
+Using namespace '**' from context named '' on server ''.
+
+Verifying the CLI packages using version stream URL: https://github.com/jenkins-x/jenkins-x-versions.git and git ref: v1.0.446
+using version 2.1.23 of **
+CLI packages kubectl, git, helm seem to be setup correctly
+NAME               VERSION
+**                 2.1.23
+Kubernetes cluster v1.16.0
+kubectl            v1.16.0
+helm client        2.14.3
+git                2.21.1
+
+Verifying Storage...
+Storage configuration looks good
+
+Helm installed and configured
+Ensuring Helm chart repository https://storage.googleapis.com/chartmuseum.jenkins-x.io is configured
+verified there is a ConfigMap config in namespace **
+verified there is a ConfigMap plugins in namespace **
+Cluster looks good, you are ready to '** boot' now!
+
+
+Showing logs for build [32msimonjamesrowe-environment-simo-rljkv-1[0m stage [32mrelease[0m and container [32mstep-install-jx-crds[0m
+Jenkins X CRDs upgraded with success
+
+Showing logs for build [32msimonjamesrowe-environment-simo-rljkv-1[0m stage [32mrelease[0m and container [32mstep-install-velero[0m
+Modified file /workspace/source/systems/velero/Chart.yaml to set the chart to version 1
+creating the lock configmap **-lock-velero
+lock configmap **-lock-velero created
+Verifying the helm requirements versions in dir: . using version stream URL: https://github.com/jenkins-x/jenkins-x-versions.git and git ref: v1.0.446
+cleaning the lock configmap **-lock-velero
+
+Showing logs for build [32msimonjamesrowe-environment-simo-rljkv-1[0m stage [32mrelease[0m and container [32mstep-install-velero-backups[0m
+Modified file /workspace/source/systems/velero-backups/Chart.yaml to set the chart to version 1
+creating the lock configmap **-lock-velero
+lock configmap **-lock-velero created
+Ignoring templates/default-backup.yaml
+No requirements file: /tmp/**-helm-apply-722662410/velero-backups/requirements.yaml so not checking for missing versions
+cleaning the lock configmap **-lock-velero
+
+Showing logs for build [32msimonjamesrowe-environment-simo-rljkv-1[0m stage [32mrelease[0m and container [32mstep-install-nginx-controller[0m
+Modified file /workspace/source/systems/**ing/Chart.yaml to set the chart to version 1
+creating the lock configmap **-lock-kube-system
+lock configmap **-lock-kube-system created
+Verifying the helm requirements versions in dir: . using version stream URL: https://github.com/jenkins-x/jenkins-x-versions.git and git ref: v1.0.446
+
+cleaning the lock configmap **-lock-kube-system
+
+Showing logs for build [32msimonjamesrowe-environment-simo-rljkv-1[0m stage [32mrelease[0m and container [32mstep-create-helm-values[0m
+defaulting to secret storage scheme local found from requirements file at /workspace/source/**-requirements.yml
+defaulting to secret base path to the cluster name simonjamesrowe found from requirements file at /workspace/source/**-requirements.yml
+generated schema file /workspace/source/env/parameters.schema.json from template /workspace/source/env/parameters.tmpl.schema.json
+Jenkins X Admin Username ***** [Automatically accepted existing value]
+Jenkins X Admin Password *** [Automatically accepted existing value]
+Pipeline bot Git username ************* [Automatically accepted existing value]
+Pipeline bot Git email address simon@simonjamesrowe.com [Automatically accepted existing value]
+Pipeline bot Git token *** [Automatically accepted existing value]
+HMAC token, used to validate incoming webhooks. Press enter to use the generated token *** [Automatically accepted existing value]
+AWS Access Key for Route 53 Access *** [Automatically accepted existing value]
+AWS Secret for Route 53 Access *** [Automatically accepted existing value]
+Route 53 zone id *** [Automatically accepted existing value]
+Do you want to configure non default Docker Registry? false [Automatically accepted existing value]
+
+Showing logs for build [32msimonjamesrowe-environment-simo-rljkv-1[0m stage [32mrelease[0m and container [32mstep-create-install-values[0m
+WARNING: Note that we have only tested TLS support on Google Container Engine with external-dns so far. This may not work!
+
+Showing logs for build [32msimonjamesrowe-environment-simo-rljkv-1[0m stage [32mrelease[0m and container [32mstep-install-external-dns[0m
+Modified file /workspace/source/systems/external-dns/Chart.yaml to set the chart to version 1
+creating the lock configmap **-lock-**
+lock configmap **-lock-** created
+Verifying the helm requirements versions in dir: . using version stream URL: https://github.com/jenkins-x/jenkins-x-versions.git and git ref: v1.0.446
+Adding missing Helm repo: charts.bitnami.com https://charts.bitnami.com/bitnami
+Successfully added Helm repository charts.bitnami.com.
+cleaning the lock configmap **-lock-**
+
+Showing logs for build [32msimonjamesrowe-environment-simo-rljkv-1[0m stage [32mrelease[0m and container [32mstep-install-cert-manager-crds[0m
+customresourcedefinition.apiextensions.k8s.io/challenges.acme.cert-manager.io configured
+customresourcedefinition.apiextensions.k8s.io/orders.acme.cert-manager.io configured
+customresourcedefinition.apiextensions.k8s.io/certificaterequests.cert-manager.io configured
+customresourcedefinition.apiextensions.k8s.io/certificates.cert-manager.io configured
+customresourcedefinition.apiextensions.k8s.io/clusterissuers.cert-manager.io configured
+customresourcedefinition.apiextensions.k8s.io/issuers.cert-manager.io configured
+
+Showing logs for build [32msimonjamesrowe-environment-simo-rljkv-1[0m stage [32mrelease[0m and container [32mstep-install-cert-manager[0m
+Modified file /workspace/source/systems/cm/Chart.yaml to set the chart to version 1
+creating the lock configmap **-lock-cert-manager
+lock configmap **-lock-cert-manager created
+Verifying the helm requirements versions in dir: . using version stream URL: https://github.com/jenkins-x/jenkins-x-versions.git and git ref: v1.0.446
+Adding missing Helm repo: charts.jetstack.io https://charts.jetstack.io
+Successfully added Helm repository charts.jetstack.io.
+
+
+cleaning the lock configmap **-lock-cert-manager
+
+Showing logs for build [32msimonjamesrowe-environment-simo-rljkv-1[0m stage [32mrelease[0m and container [32mstep-create-acme-config[0m
+Saved the rendered configuration into values.yaml file
+
+Showing logs for build [32msimonjamesrowe-environment-simo-rljkv-1[0m stage [32mrelease[0m and container [32mstep-install-acme-issuer-and-certificate[0m
+Modified file /workspace/source/systems/acme/Chart.yaml to set the chart to version 1
+creating the lock configmap **-lock-**
+lock configmap **-lock-** created
+Ignoring templates/cert-manager-aws-secret.yaml
+Ignoring templates/cert-manager-prod-certificate.yaml
+Ignoring templates/cert-manager-prod-issuer.yaml
+Ignoring templates/cert-manager-staging-certificate.yaml
+Ignoring templates/cert-manager-staging-issuer.yaml
+No requirements file: /tmp/**-helm-apply-805060528/acme/requirements.yaml so not checking for missing versions
+
+cleaning the lock configmap **-lock-**
+
+Showing logs for build [32msimonjamesrowe-environment-simo-rljkv-1[0m stage [32mrelease[0m and container [32mstep-install-vault[0m
+Not attempting to boot Vault as using secret storage: local
+
+Showing logs for build [32msimonjamesrowe-environment-simo-rljkv-1[0m stage [32mrelease[0m and container [32mstep-create-jx-auth-config[0m
+Saved the rendered configuration into templates/**-auth-configmap.yaml file
+
+Showing logs for build [32msimonjamesrowe-environment-simo-rljkv-1[0m stage [32mrelease[0m and container [32mstep-install-jx-auth-config[0m
+Modified file /workspace/source/systems/**-auth/Chart.yaml to set the chart to version 1
+creating the lock configmap **-lock-**
+lock configmap **-lock-** created
+Ignoring templates/**-auth-configmap.yaml
+No requirements file: /tmp/**-helm-apply-581523201/**-auth/requirements.yaml so not checking for missing versions
+cleaning the lock configmap **-lock-**
+
+Showing logs for build [32msimonjamesrowe-environment-simo-rljkv-1[0m stage [32mrelease[0m and container [32mstep-install-jenkins-x[0m
+Modified file /workspace/source/env/Chart.yaml to set the chart to version 1
+creating the lock configmap **-lock-**
+lock configmap **-lock-** created
+Ignoring templates/.gitignore
+Applying the kubernetes overrides at ../kubeProviders/minikube/values.tmpl.yaml
+Verifying the helm requirements versions in dir: . using version stream URL: https://github.com/jenkins-x/jenkins-x-versions.git and git ref: v1.0.446
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+
+cleaning the lock configmap **-lock-**
+
+Showing logs for build [32msimonjamesrowe-environment-simo-rljkv-1[0m stage [32mrelease[0m and container [32mstep-verify-jenkins-x-environment[0m
+Storing the requirements in team settings in the dev environment
+Validating git repository for dev environment at URL https://github.com/simonjamesrowe/environment-simonjamesrowe-dev.git
+Validating git repository for production environment at URL https://github.com/simonjamesrowe/environment-simonjamesrowe-production.git
+Using Git provider github at https://github.com
+? Using Git user name: *************
+? Using organisation: simonjamesrowe
+Creating repository simonjamesrowe/environment-simonjamesrowe-production
+Git repository simonjamesrowe/environment-simonjamesrowe-production already exists
+Pushed Git repository to https://github.com/simonjamesrowe/environment-simonjamesrowe-production
+
+Validating git repository for staging environment at URL https://github.com/simonjamesrowe/environment-simonjamesrowe-staging.git
+Using Git provider github at https://github.com
+? Using Git user name: *************
+? Using organisation: simonjamesrowe
+Creating repository simonjamesrowe/environment-simonjamesrowe-staging
+Git repository simonjamesrowe/environment-simonjamesrowe-staging already exists
+Pushed Git repository to https://github.com/simonjamesrowe/environment-simonjamesrowe-staging
+
+Environment git repositories look good
+
+
+Showing logs for build [32msimonjamesrowe-environment-simo-rljkv-1[0m stage [32mrelease[0m and container [32mstep-install-repositories[0m
+Modified file /workspace/source/repositories/Chart.yaml to set the chart to version 1
+creating the lock configmap **-lock-**
+lock configmap **-lock-** created
+Ignoring templates/default-group.yaml
+No requirements file: /tmp/**-helm-apply-393754324/repositories/requirements.yaml so not checking for missing versions
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+
+cleaning the lock configmap **-lock-**
+
+Showing logs for build [32msimonjamesrowe-environment-simo-rljkv-1[0m stage [32mrelease[0m and container [32mstep-install-pipelines[0m
+
+Showing logs for build [32msimonjamesrowe-environment-simo-rljkv-1[0m stage [32mrelease[0m and container [32mstep-update-webhooks[0m
+DEBUG: Finding service url for hook in namespace **
+DEBUG: Couldn't find service url, attempting to look up via ingress
+DEBUG: found service url https://hook-**.simonjamesrowe.com
+Updating webhooks for Owner: simonjamesrowe and Repository: environment-simonjamesrowe-dev in git server: https://github.com
+Checking hooks for repository simonjamesrowe/environment-simonjamesrowe-dev with user *************
+Found matching hook for url https://hook-**.simonjamesrowe.com/hook
+Updating GitHub webhook for simonjamesrowe/environment-simonjamesrowe-dev for url https://hook-**.simonjamesrowe.com/hook
+Updating webhooks for Owner: simonjamesrowe and Repository: environment-simonjamesrowe-production in git server: https://github.com
+Checking hooks for repository simonjamesrowe/environment-simonjamesrowe-production with user *************
+Found matching hook for url https://hook-**.simonjamesrowe.com/hook
+Updating GitHub webhook for simonjamesrowe/environment-simonjamesrowe-production for url https://hook-**.simonjamesrowe.com/hook
+Updating webhooks for Owner: simonjamesrowe and Repository: environment-simonjamesrowe-staging in git server: https://github.com
+Checking hooks for repository simonjamesrowe/environment-simonjamesrowe-staging with user *************
+Found matching hook for url https://hook-**.simonjamesrowe.com/hook
+Updating GitHub webhook for simonjamesrowe/environment-simonjamesrowe-staging for url https://hook-**.simonjamesrowe.com/hook
+
+Showing logs for build [32msimonjamesrowe-environment-simo-rljkv-1[0m stage [32mrelease[0m and container [32mstep-verify-installation[0m
+verifying the Jenkins X installation in namespace **
+verifying pods
+Checking pod statuses
+POD                                          STATUS
+jenkins-778875fc64-5gl5p                     Running
+jenkins-x-chartmuseum-774f8b95b-8gll2        Running
+jenkins-x-controllerbuild-787544fbbf-hctwn   Running
+jenkins-x-controllerrole-686c7cdc9b-p4znx    Running
+jenkins-x-docker-registry-dbf6889cd-n47vq    Running
+jenkins-x-gcactivities-1589178600-544tt      Succeeded
+jenkins-x-gcactivities-1589180400-5pnw4      Succeeded
+jenkins-x-gcactivities-1589182200-6kdvk      Succeeded
+jenkins-x-gcpods-1589178600-j259w            Succeeded
+jenkins-x-gcpods-1589180400-n9vkw            Succeeded
+jenkins-x-gcpods-1589182200-4hxlq            Succeeded
+jenkins-x-heapster-7fbb78bf79-cc4qp          Running
+jenkins-x-nexus-555999cf9c-wvjqz             Running
+lighthouse-foghorn-85b77bffb4-kbhm9          Running
+lighthouse-keeper-6b75fdb64b-s2bgp           Running
+lighthouse-webhooks-78dc9776fd-hgbqd         Running
+lighthouse-webhooks-78dc9776fd-xbzvj         Running
+tekton-pipelines-controller-5fd865d69b-kcvlp Running
+Verifying the git config
+Verifying username ************* at git server github at https://github.com
+Found 1 organisations in git server https://github.com: simonjamesrowe
+Validated pipeline user ************* on git server https://github.com
+Git tokens seem to be setup correctly
+Installation is currently looking: GOOD
