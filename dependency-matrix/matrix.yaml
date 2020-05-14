@@ -1,0 +1,7 @@
+dependencies:
+- host: github.com
+  owner: simonjamesrowe
+  repo: demo
+  url: https://github.com/simonjamesrowe/demo.git
+  version: ""
+  versionURL: ""
