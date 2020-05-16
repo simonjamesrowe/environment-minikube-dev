@@ -12,7 +12,7 @@ cluster:
   gitName: github
   gitServer: https://github.com
   namespace: jx
-  provider: minikube
+  provider: kubernetes
   registry: http:/jenkins-x-docker-registry.jx.svc:5000
 environments:
 - ingress:
