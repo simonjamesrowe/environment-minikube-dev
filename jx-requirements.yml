@@ -55,7 +55,7 @@ ingress:
     enabled: true
     production: false
 kaniko: true
-repository: nexus
+repository: manual
 secretStorage: local
 storage:
   backup:
