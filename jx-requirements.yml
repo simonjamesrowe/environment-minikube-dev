@@ -13,7 +13,7 @@ cluster:
   gitServer: https://github.com
   namespace: jx
   provider: kubernetes
-  registry: jenkins-x-docker-registry.jx:5000
+  registry: https://nexus-jx.simonjamesrowe.com/repository/docker/
 environments:
 - ingress:
     domain: simonjamesrowe.com
