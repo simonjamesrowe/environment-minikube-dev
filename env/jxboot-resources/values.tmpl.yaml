@@ -156,9 +156,6 @@ jenkins-x-platform:
     api:
       livenessProbe:
         initialDelaySeconds: 1000
-  nexus:
-    persistence:
-      size: 100Gi
   postinstalljob:
     enabled: "true"
 
