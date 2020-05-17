@@ -7,21 +7,21 @@ metadata:
 spec:
   acme:
     server: https://acme-staging-v02.api.letsencrypt.org/directory
-    email: "{{ .Requirements.ingress.tls.email }}"
+    email: "{{ .Values.certmanager.email }}"
     # Name of a secret used to store the ACME account private key
     privateKeySecretRef:
       name: letsencrypt-staging
     solvers:
     - selector:
         dnsNames:
-        - "*.{{ .Requirements.ingress.domain }}"
-        - "{{ .Requirements.ingress.domain}}"
+          - "*.{{ .Values.cluster.domain }}"
+          - "{{ .Values.cluster.domain }}"
       # ACME DNS-01 provider configurations
       dns01:
         route53:
           region: us-east-1
-          hostedZoneID: {{ .Parameters.aws.hostedZoneId}}
-          accessKeyID: {{ .Parameters.aws.accessKeyId}}
+          hostedZoneID: {{ .Values.aws.hostedZoneId}}
+          accessKeyID: {{ .Values.aws.accessKeyId}}
           secretAccessKeySecretRef:
             name: cert-manager-aws-creds
             key: accessSecret

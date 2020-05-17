@@ -1,7 +1,0 @@
-service:
-  dockerPort: 5000
-
-persistence:
-  enabled: true
-  accessMode: ReadWriteOnce
-  size: 100Gi

@@ -22,7 +22,7 @@ environments:
     tls:
       email: simon.rowe@gmail.com
       enabled: true
-      production: true
+      production: false
   key: dev
   repository: environment-simonjamesrowe-dev
 - ingress:
@@ -53,7 +53,7 @@ ingress:
   tls:
     email: simon.rowe@gmail.com
     enabled: true
-    production: true
+    production: false
 kaniko: true
 repository: nexus
 secretStorage: local
