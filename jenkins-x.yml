@@ -249,6 +249,18 @@ pipelineConfig:
             - apply
             - --boot
             - --remote
+            - --no-vault
+            - --name
+            - jx-nexus
+            command: jx
+            dir: /workspace/source/systems/nexus
+            name: install-jx-nexus
+          - args:
+            - step
+            - helm
+            - apply
+            - --boot
+            - --remote
             - --name
             - jenkins-x
             - --provider-values-dir
