@@ -12,8 +12,8 @@ cluster:
   gitName: github
   gitServer: https://github.com
   namespace: jx
-  provider: kubernetes
-  registry: https://nexus-jx.simonjamesrowe.com/repository/docker/
+  provider: kind
+  registry: https://nexus-jx.simonjamesrowe.com/repository/docker
 environments:
 - ingress:
     domain: simonjamesrowe.com
