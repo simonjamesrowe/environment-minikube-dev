@@ -251,7 +251,7 @@ pipelineConfig:
             - --remote
             - --no-vault
             - --name
-            - jx-nexus
+            - nexus
             command: jx
             dir: /workspace/source/systems/nexus
             name: install-jx-nexus

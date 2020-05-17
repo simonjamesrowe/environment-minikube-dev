@@ -3,7 +3,3 @@ enabled: true
 {{- else }}
 enabled: false
 {{- end }}
-
-
-service:
-
