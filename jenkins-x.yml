@@ -299,22 +299,3 @@ pipelineConfig:
             command: jx
             dir: /workspace/source/env
             name: verify-installation
-          - args:
-            - step
-            - helm
-            - install
-            - harbor/harbor
-            - --name
-            - harbor
-            command: jx
-            dir: /workspace/source/systems/harbor
-            name: harbor-install
-          - args:
-            - step
-            - verify
-            - install
-            - --pod-wait-time
-            - 30m
-            command: jx
-            dir: /workspace/source/env
-            name: verify-harbor-install
