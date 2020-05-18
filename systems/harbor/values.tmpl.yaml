@@ -1,0 +1,34 @@
+expose:
+  type: ingress
+  {{- if .Requirements.ingress.tls.enabled }}
+  tls:
+    enabled: true
+{{- if .Requirements.ingress.tls.production }}
+    secretName: "tls-{{ .Requirements.ingress.domain | replace "." "-" }}-p"
+{{- else }}
+    secretName: "tls-{{ .Requirements.ingress.domain | replace "." "-" }}-s"
+{{- end }}
+{{- end }}
+  hosts:
+    core: core-harbor.{{ .Requirements.ingress.domain }}
+
+persistence:
+  persistentVolumeClaim:
+    registry:
+      size: 100Gi
+    database:
+      size: 5Gi
+    redis:
+      size: 5Gi
+
+externalURL: https://core-harbor.{{ .Requirements.ingress.domain }}
+harbourAdminPassword: local:simonjamesrowe/adminUser:password
+
+chartmuseum:
+  enabled: false
+
+clair:
+  enabled: false
+
+notary:
+  enabled: false
