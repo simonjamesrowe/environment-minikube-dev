@@ -1,5 +1,0 @@
-apiVersion: v1
-description: A Helm chart for Kubernetes
-icon: https://github.com/jenkins-x/jenkins-x-platform/blob/08df980/images/nexus.png
-name: nexus
-version: "1"
