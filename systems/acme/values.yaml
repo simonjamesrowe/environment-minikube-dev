@@ -3,7 +3,7 @@ cluster:
   projectID: ""
   region: ""
 certmanager:
-  production: "false"
+  production: "true"
   email:  "simon.rowe@gmail.com"
   enabled: true
 
