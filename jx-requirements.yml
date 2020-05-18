@@ -13,7 +13,7 @@ cluster:
   gitServer: https://github.com
   namespace: jx
   provider: kind
-  registry: https://nexus.simonjamesrowe.com/repository/docker
+  registry: https://nexus-docker-repo.simonjamesrowe.com/repository/docker
 environments:
 - ingress:
     domain: simonjamesrowe.com

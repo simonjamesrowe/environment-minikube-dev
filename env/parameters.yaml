@@ -8,7 +8,7 @@ aws:
 docker:
   email: simon@simonjamesrowe.com
   password: local:simonjamesrowe/docker:password
-  url: https://nexus.simonjamesrowe.com/repository/docker
+  url: https://nexus-docker-repo.simonjamesrowe.com/repository/docker
   username: admin
 enableDocker: true
 pipelineUser:

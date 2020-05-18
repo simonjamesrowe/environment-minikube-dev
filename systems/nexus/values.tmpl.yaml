@@ -11,6 +11,10 @@ service:
   type: ClusterIP
   externalPort: 80
   internalPort: 8081
+dockerRegistry:
+  name: nexus-docker-repo
+  type: ClusterIP
+  port: 5000
 resources:
   # limits:
     # cpu: 100m
@@ -19,7 +23,7 @@ resources:
     # cpu: 100m
     # memory: 2Gi
 env:
-  ENABLE_ANONYMOUS_ACCESS: false
+  ENABLE_ANONYMOUS_ACCESS: TRUE
   NEXUS_SECURITY_RANDOMPASSWORD: false
 readinessProbe:
   initialDelaySeconds: 30
@@ -40,6 +44,7 @@ defaultAdminPassword: local:simonjamesrowe/adminUser:password
 ingress:
   name: nexus
   host: nexus.{{ .Requirements.ingress.domain }}
+  registryHost: nexus-docker-repo.{{ .Requirements.ingress.domain }}
   {{- if .Requirements.ingress.tls.production }}
   secretName: "tls-{{ .Requirements.ingress.domain | replace "." "-" }}-p"
   {{- else }}

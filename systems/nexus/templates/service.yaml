@@ -21,3 +21,24 @@ spec:
   selector:
     app: {{ template "nexus.name" . }}
     release: {{ .Release.Name }}
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "nexus.dockerRegistry.name" . }}
+  labels:
+    app: {{ template "nexus.name" . }}
+    chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.dockerRegistry.port }}
+      targetPort: {{ .Values.dockerRegistry.port }}
+      protocol: TCP
+      name: {{ .Values.dockerRegistry.name }}
+  selector:
+    app: {{ template "nexus.name" . }}
+    release: {{ .Release.Name }}

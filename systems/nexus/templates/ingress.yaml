@@ -16,4 +16,22 @@ spec:
   - hosts:
     - {{ .Values.ingress.host }}
     secretName: {{ .Values.ingress.secretName}}
-
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+  name: {{ .Values.dockerRegistry.name }}
+spec:
+  rules:
+    - host: {{ .Values.ingress.registryHost }}
+      http:
+        paths:
+          - backend:
+              serviceName: {{ .Values.dockerRegistry.name }}
+              servicePort: {{ .Values.dockerRegistry.port }}
+  tls:
+    - hosts:
+        - {{ .Values.ingress.registryHost }}
+      secretName: {{ .Values.ingress.secretName}}
