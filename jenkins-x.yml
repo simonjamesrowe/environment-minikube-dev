@@ -249,18 +249,6 @@ pipelineConfig:
             - apply
             - --boot
             - --remote
-            - --no-vault
-            - --name
-            - nexus
-            command: jx
-            dir: /workspace/source/systems/nexus
-            name: install-jx-nexus
-          - args:
-            - step
-            - helm
-            - apply
-            - --boot
-            - --remote
             - --name
             - jenkins-x
             - --provider-values-dir
@@ -311,3 +299,24 @@ pipelineConfig:
             command: jx
             dir: /workspace/source/env
             name: verify-installation
+          - args:
+            - step
+            - helm
+            - apply
+            - --boot
+            - --remote
+            - --no-vault
+            - --name
+            - nexus
+            command: jx
+            dir: /workspace/source/systems/nexus
+            name: install-jx-nexus
+          - args:
+            - step
+            - verify
+            - install
+            - --pod-wait-time
+            - 30m
+            command: jx
+            dir: /workspace/source/env
+            name: verify-nexus-install
