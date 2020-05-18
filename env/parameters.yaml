@@ -7,7 +7,7 @@ aws:
   hostedZoneId: local:simonjamesrowe/aws:hostedZoneId
 docker:
   email: simon@simonjamesrowe.com
-  password: local:simonjamesrowe/adminUser:password
+  password: local:simonjamesrowe/docker:password
   url: https://nexus.simonjamesrowe.com/repository/docker
   username: admin
 enableDocker: true
