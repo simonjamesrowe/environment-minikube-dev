@@ -1,6 +1,6 @@
 expose:
   type: ingress
-  {{- if .Requirements.ingress.tls.enabled }}
+{{- if .Requirements.ingress.tls.enabled }}
   tls:
     enabled: true
 {{- if .Requirements.ingress.tls.production }}
@@ -9,8 +9,9 @@ expose:
     secretName: "tls-{{ .Requirements.ingress.domain | replace "." "-" }}-s"
 {{- end }}
 {{- end }}
-  hosts:
-    core: core-harbor.{{ .Requirements.ingress.domain }}
+  ingress:
+    hosts:
+      core: core-harbor.{{ .Requirements.ingress.domain }}
 
 persistence:
   persistentVolumeClaim:
