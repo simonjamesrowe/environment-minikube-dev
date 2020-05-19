@@ -11,7 +11,7 @@ expose:
 {{- end }}
   ingress:
     hosts:
-      core: core-harbor.{{ .Requirements.ingress.domain }}
+      core: harbor.{{ .Requirements.ingress.domain }}
 
 persistence:
   persistentVolumeClaim:
