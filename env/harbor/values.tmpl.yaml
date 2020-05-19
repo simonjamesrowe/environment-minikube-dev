@@ -22,8 +22,8 @@ persistence:
     redis:
       size: 5Gi
 
-externalURL: https://core-harbor.{{ .Requirements.ingress.domain }}
-harbourAdminPassword: local:simonjamesrowe/adminUser:password
+externalURL: https://harbor.{{ .Requirements.ingress.domain }}
+harborAdminPassword: local:simonjamesrowe/adminUser:password
 
 chartmuseum:
   enabled: false
