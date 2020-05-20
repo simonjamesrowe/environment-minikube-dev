@@ -23,7 +23,7 @@ persistence:
       size: 5Gi
 
 externalURL: https://harbor.{{ .Requirements.ingress.domain }}
-harborAdminPassword: local:simonjamesrowe/adminUser:password
+harborAdminPassword: local:simonjamesrowe/docker:password
 
 chartmuseum:
   enabled: false
