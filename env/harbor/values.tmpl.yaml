@@ -12,6 +12,11 @@ expose:
   ingress:
     hosts:
       core: harbor.{{ .Requirements.ingress.domain }}
+    annotations:
+      ingress.kubernetes.io/ssl-redirect: "false"
+      ingress.kubernetes.io/proxy-body-size: "0"
+      nginx.ingress.kubernetes.io/ssl-redirect: "false"
+      nginx.ingress.kubernetes.io/proxy-body-size: "0"
 
 persistence:
   persistentVolumeClaim:
@@ -22,7 +27,7 @@ persistence:
     redis:
       size: 5Gi
 
-externalURL: https://harbor.{{ .Requirements.ingress.domain }}
+externalURL: http://harbor.{{ .Requirements.ingress.domain }}
 harborAdminPassword: local:simonjamesrowe/docker:password
 
 chartmuseum:

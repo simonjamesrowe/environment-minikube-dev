@@ -1,7 +1,7 @@
 autoUpdate:
   enabled: false
   schedule: ""
-bootConfigURL: https://github.com/simonjamesrowe/environment-minikube-dev
+bootConfigURL: https://github.com/simonjamesrowe/environment-simonjamesrowe-dev
 cluster:
   clusterName: simonjamesrowe
   devEnvApprovers:
@@ -21,7 +21,7 @@ environments:
     namespaceSubDomain: -jx.
     tls:
       email: simon.rowe@gmail.com
-      enabled: true
+      enabled: false
       production: false
   key: dev
   repository: environment-simonjamesrowe-dev
@@ -52,7 +52,7 @@ ingress:
   namespaceSubDomain: -jx.
   tls:
     email: simon.rowe@gmail.com
-    enabled: true
+    enabled: false
     production: false
 kaniko: true
 repository: nexus

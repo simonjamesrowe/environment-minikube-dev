@@ -5,7 +5,7 @@ cluster:
 certmanager:
   production: "false"
   email:  "simon.rowe@gmail.com"
-  enabled: true
+  enabled: false
 
 aws:
   accessKeyId: "local:simonjamesrowe/aws:accessKeyId"
