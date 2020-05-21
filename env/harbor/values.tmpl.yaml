@@ -2,7 +2,7 @@ expose:
   type: ingress
 {{- if .Requirements.ingress.tls.enabled }}
   tls:
-    enabled: true
+    enabled: false
 {{- if .Requirements.ingress.tls.production }}
     secretName: "tls-{{ .Requirements.ingress.domain | replace "." "-" }}-p"
 {{- else }}
