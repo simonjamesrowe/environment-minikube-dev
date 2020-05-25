@@ -21,8 +21,8 @@ environments:
     namespaceSubDomain: -jx.
     tls:
       email: simon.rowe@gmail.com
-      enabled: false
-      production: false
+      enabled: true
+      production: true
   key: dev
   repository: environment-simonjamesrowe-dev
 - ingress:
@@ -41,8 +41,8 @@ environments:
     namespaceSubDomain: ""
     tls:
       email: ""
-      enabled: false
-      production: false
+      enabled: true
+      production: true
   key: production
   repository: environment-simonjamesrowe-production
 gitops: true
@@ -52,8 +52,8 @@ ingress:
   namespaceSubDomain: -jx.
   tls:
     email: simon.rowe@gmail.com
-    enabled: false
-    production: false
+    enabled: true
+    production: true
 kaniko: true
 repository: nexus
 secretStorage: local

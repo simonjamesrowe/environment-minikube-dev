@@ -3,9 +3,9 @@ cluster:
   projectID: ""
   region: ""
 certmanager:
-  production: "false"
+  production: "true"
   email:  "simon.rowe@gmail.com"
-  enabled: false
+  enabled: true
 
 aws:
   accessKeyId: "local:simonjamesrowe/aws:accessKeyId"
