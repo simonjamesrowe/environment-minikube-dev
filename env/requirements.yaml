@@ -26,6 +26,10 @@ dependencies:
   name: mongodb
   repository: https://charts.bitnami.com/bitnami
   version: 7.14.0
+- alias: kubernetes-replicator
+  name: kubernetes-replicator
+  repository: https://helm.mittwald.de
+  version: 2.3.0
 #- condition: chartmuseum.enabled
 #  name: chartmuseum
 #  repository: http://chartmuseum.jenkins-x.io
