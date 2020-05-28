@@ -31,8 +31,8 @@ environments:
     namespaceSubDomain: ""
     tls:
       email: ""
-      enabled: false
-      production: false
+      enabled: true
+      production: true
   key: staging
   repository: environment-simonjamesrowe-staging
 - ingress:

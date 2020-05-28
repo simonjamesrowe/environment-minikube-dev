@@ -22,6 +22,10 @@ dependencies:
   alias: harbor
   repository: https://helm.goharbor.io
   version: 1.3.2
+- alias: mongodb
+  name: mongodb
+  repository: https://charts.bitnami.com/bitnami
+  version: 7.14.0
 #- condition: chartmuseum.enabled
 #  name: chartmuseum
 #  repository: http://chartmuseum.jenkins-x.io
