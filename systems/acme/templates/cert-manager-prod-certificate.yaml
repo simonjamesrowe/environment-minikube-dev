@@ -6,6 +6,9 @@ metadata:
   name: "tls-{{ .Values.cluster.domain | replace "." "-" }}-p"
   labels:
     jenkins.io/letsencrypt-service: production
+  annotations:
+    replicator.v1.mittwald.de/replication-allowed: "true"
+    replicator.v1.mittwald.de/replication-allowed-namespaces: "jx-staging,jx-production"
 spec:
   secretName: "tls-{{ .Values.cluster.domain | replace "." "-" }}-p"
   issuerRef:
