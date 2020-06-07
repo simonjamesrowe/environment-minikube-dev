@@ -1,0 +1,17 @@
+serviceAccount:
+  create: false
+mongodbUsername: simonjamesrowe
+mongodbDatabase: cms
+ingress:
+  enabled: true
+  hosts:
+    - name: mongo.{{ .Requirements.ingress.domain }}
+  tls:
+    - hosts:
+       - mongo-jx.simonjamesrowe.com
+{{- if .Requirements.ingress.tls.production }}
+      secretName: "tls-{{ .Requirements.ingress.domain | replace "." "-" }}-p"
+{{- else }}
+      secretName: "tls-{{ .Requirements.ingress.domain | replace "." "-" }}-s"
+{{- end }}
+
