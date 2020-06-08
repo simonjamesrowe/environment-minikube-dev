@@ -4,4 +4,4 @@ mongodbUsername: simonjamesrowe
 mongodbDatabase: cms
 image:
   debug: true
-tag: 4.1
+tag: 4.2
