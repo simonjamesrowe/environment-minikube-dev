@@ -1,7 +1,8 @@
 serviceAccount:
   create: false
-mongodbUsername: simonjamesrowe
-mongodbDatabase: cms
+mongodbRootPassword: {{ .Parameters.mongo.rootPassword}}
 image:
   debug: true
 tag: 4.2
+persistence:
+  size: 50Gi

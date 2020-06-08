@@ -120,6 +120,18 @@
         }
       }
     },
+    "mongo": {
+      "type": "object",
+      "required" : ["rootPassword"],
+      "properties": {
+        "rootPassword": {
+          "type": "string",
+          "format": "password",
+          "title": "Root Password for mongoDB",
+          "description": "Root Password for mongodb"
+        }
+      }
+    },
     "enableDocker": {
       "type": "boolean",
       "title": "Do you want to configure non default Docker Registry?",

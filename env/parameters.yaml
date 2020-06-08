@@ -11,6 +11,8 @@ docker:
   url: harbor.simonjamesrowe.com
   username: admin
 enableDocker: true
+mongo:
+  rootPassword: local:simonjamesrowe/mongo:rootPassword
 pipelineUser:
   email: simon@simonjamesrowe.com
   token: local:simonjamesrowe/pipelineUser:token
