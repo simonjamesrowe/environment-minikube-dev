@@ -11,3 +11,6 @@ tekton:
 dex:
   certs:
     newApi: true
+
+mongo:
+  rootPassword: {{ .Parameters.mongo.rootPassword }}
