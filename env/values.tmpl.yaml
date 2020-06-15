@@ -14,3 +14,6 @@ dex:
 
 mongo:
   rootPassword: {{ .Parameters.mongo.rootPassword }}
+  username: root
+  port: "27017"
+  hostname: jenkins-x-mongodb.jx
