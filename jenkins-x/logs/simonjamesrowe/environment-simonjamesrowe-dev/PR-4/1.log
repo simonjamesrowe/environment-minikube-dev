@@ -1,0 +1,43 @@
+
+Showing logs for build [32msimonjamesrowe-environment-simo-x7j4g-1[0m stage [32mpr-checks[0m and container [32mstep-credential-initializer-cppwv[0m
+{"level":"info","ts":1592208876.890089,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1592208876.8909836,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32msimonjamesrowe-environment-simo-x7j4g-1[0m stage [32mpr-checks[0m and container [32mstep-working-dir-initializer-tkwn5[0m
+{"level":"info","ts":1592208877.6828916,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1592208877.685393,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32msimonjamesrowe-environment-simo-x7j4g-1[0m stage [32mpr-checks[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32msimonjamesrowe-environment-simo-x7j4g-1[0m stage [32mpr-checks[0m and container [32mstep-git-source-simonjamesrowe-environment-simo-x7j4g-frclk[0m
+{"level":"info","ts":1592208882.681011,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1592208884.3196096,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/simonjamesrowe/environment-simonjamesrowe-dev.git @ master in path /workspace/source"}
+
+Showing logs for build [32msimonjamesrowe-environment-simo-x7j4g-1[0m stage [32mpr-checks[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:ad3d7602a065d6560dec6cee9da84adfd5e97103,4:8f7aa2b8ab2d41509e160aa950c27a6852f6e59e
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow 8f7aa2b8ab2d41509e160aa950c27a6852f6e59e: ad3d7602a065d6560dec6cee9da84adfd5e97103:
+DEBUG: ran git fetch --unshallow origin 8f7aa2b8ab2d41509e160aa950c27a6852f6e59e: ad3d7602a065d6560dec6cee9da84adfd5e97103: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard ad3d7602a065d6560dec6cee9da84adfd5e97103
+DEBUG: ran git reset --hard ad3d7602a065d6560dec6cee9da84adfd5e97103 in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge 8f7aa2b8ab2d41509e160aa950c27a6852f6e59e
+DEBUG: ran git merge 8f7aa2b8ab2d41509e160aa950c27a6852f6e59e in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e ad3d7602a065d6560dec6cee9da84adfd5e97103..HEAD
+Merged SHA 8f7aa2b8ab2d41509e160aa950c27a6852f6e59e with commit message 'chore(deps): bump https://github.com/simonjamesrowe/strapi-cms.git' into base branch master
+
+Showing logs for build [32msimonjamesrowe-environment-simo-x7j4g-1[0m stage [32mpr-checks[0m and container [32mstep-verify-parameters[0m
+ERROR: (****): Must validate "then" as "if" was valid
+ERROR: docker.url: Does not match format 'uri'
+error: verifying provided values file against schema file: invalid values
+ERROR: (****): Must validate all the schemas (allOf)
+
+The "parameters.yaml" values file needs to be updated. You can regenerate the values file from schema "parameters.tmpl.schema.json" with command:
+
+** step create values --name parameters
+		
+[31m
+Pipeline failed on stage 'pr-checks' : container 'step-verify-parameters'. The execution of the pipeline has stopped.[0m
