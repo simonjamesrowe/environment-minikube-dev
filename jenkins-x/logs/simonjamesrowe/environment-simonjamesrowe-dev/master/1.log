@@ -1,26 +1,26 @@
 
-Showing logs for build [32msimonjamesrowe-environment-simo-dszgh-1[0m stage [32mrelease[0m and container [32mstep-credential-initializer-qbnjw[0m
-{"level":"info","ts":1590650477.9731138,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
-{"level":"info","ts":1590650477.9740174,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Showing logs for build [32msimonjamesrowe-environment-simo-pdngt-1[0m stage [32mrelease[0m and container [32mstep-credential-initializer-8h9xr[0m
+{"level":"info","ts":1592256246.379137,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1592256246.382863,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
 
-Showing logs for build [32msimonjamesrowe-environment-simo-dszgh-1[0m stage [32mrelease[0m and container [32mstep-working-dir-initializer-wdbcn[0m
-{"level":"info","ts":1590650478.726489,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
-{"level":"info","ts":1590650478.7289717,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+Showing logs for build [32msimonjamesrowe-environment-simo-pdngt-1[0m stage [32mrelease[0m and container [32mstep-working-dir-initializer-cd2xn[0m
+{"level":"info","ts":1592256246.7268653,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1592256246.730419,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
 
-Showing logs for build [32msimonjamesrowe-environment-simo-dszgh-1[0m stage [32mrelease[0m and container [32mstep-place-tools[0m
+Showing logs for build [32msimonjamesrowe-environment-simo-pdngt-1[0m stage [32mrelease[0m and container [32mstep-place-tools[0m
 
-Showing logs for build [32msimonjamesrowe-environment-simo-dszgh-1[0m stage [32mrelease[0m and container [32mstep-git-source-simonjamesrowe-environment-simo-dszgh-tlj7x[0m
-{"level":"info","ts":1590650490.7945764,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
-{"level":"info","ts":1590650492.2608225,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/simonjamesrowe/environment-simonjamesrowe-dev.git @ v1.0.94 in path /workspace/source"}
+Showing logs for build [32msimonjamesrowe-environment-simo-pdngt-1[0m stage [32mrelease[0m and container [32mstep-git-source-simonjamesrowe-environment-simo-pdngt-5zwgq[0m
+{"level":"info","ts":1592256256.7438717,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1592256258.3314884,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/simonjamesrowe/environment-simonjamesrowe-dev.git @ v1.0.107 in path /workspace/source"}
 
-Showing logs for build [32msimonjamesrowe-environment-simo-dszgh-1[0m stage [32mrelease[0m and container [32mstep-git-merge[0m
-Using SHAs from PULL_REFS=master:729346ec9947a83939b413d086b1faa48c262ce2
+Showing logs for build [32msimonjamesrowe-environment-simo-pdngt-1[0m stage [32mrelease[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:d20490ff7801dd84fd8d8c682386b7719899edba
 WARNING: no SHAs to merge, falling back to initial cloned commit
 
-Showing logs for build [32msimonjamesrowe-environment-simo-dszgh-1[0m stage [32mrelease[0m and container [32mstep-validate-git[0m
+Showing logs for build [32msimonjamesrowe-environment-simo-pdngt-1[0m stage [32mrelease[0m and container [32mstep-validate-git[0m
 Git configured for user: jenkins-x-bot and email jenkins-x@googlegroups.com
 
-Showing logs for build [32msimonjamesrowe-environment-simo-dszgh-1[0m stage [32mrelease[0m and container [32mstep-verify-preinstall[0m
+Showing logs for build [32msimonjamesrowe-environment-simo-pdngt-1[0m stage [32mrelease[0m and container [32mstep-verify-preinstall[0m
 ** boot has only been validated on GKE and EKS, we'd love feedback and contributions for other Kubernetes providers
 Running in Batch Mode, execution will continue
 writing the following to the OWNERS file for the development environment repository:
@@ -56,25 +56,25 @@ verified there is a ConfigMap plugins in namespace **
 Cluster looks good, you are ready to '** boot' now!
 
 
-Showing logs for build [32msimonjamesrowe-environment-simo-dszgh-1[0m stage [32mrelease[0m and container [32mstep-install-jx-crds[0m
+Showing logs for build [32msimonjamesrowe-environment-simo-pdngt-1[0m stage [32mrelease[0m and container [32mstep-install-jx-crds[0m
 Jenkins X CRDs upgraded with success
 
-Showing logs for build [32msimonjamesrowe-environment-simo-dszgh-1[0m stage [32mrelease[0m and container [32mstep-install-velero[0m
+Showing logs for build [32msimonjamesrowe-environment-simo-pdngt-1[0m stage [32mrelease[0m and container [32mstep-install-velero[0m
 Modified file /workspace/source/systems/velero/Chart.yaml to set the chart to version 1
 creating the lock configmap **-lock-velero
 lock configmap **-lock-velero created
 Verifying the helm requirements versions in dir: . using version stream URL: https://github.com/jenkins-x/jenkins-x-versions.git and git ref: v1.0.446
 cleaning the lock configmap **-lock-velero
 
-Showing logs for build [32msimonjamesrowe-environment-simo-dszgh-1[0m stage [32mrelease[0m and container [32mstep-install-velero-backups[0m
+Showing logs for build [32msimonjamesrowe-environment-simo-pdngt-1[0m stage [32mrelease[0m and container [32mstep-install-velero-backups[0m
 Modified file /workspace/source/systems/velero-backups/Chart.yaml to set the chart to version 1
 creating the lock configmap **-lock-velero
 lock configmap **-lock-velero created
 Ignoring templates/default-backup.yaml
-No requirements file: /tmp/**-helm-apply-693547475/velero-backups/requirements.yaml so not checking for missing versions
+No requirements file: /tmp/**-helm-apply-646194584/velero-backups/requirements.yaml so not checking for missing versions
 cleaning the lock configmap **-lock-velero
 
-Showing logs for build [32msimonjamesrowe-environment-simo-dszgh-1[0m stage [32mrelease[0m and container [32mstep-install-nginx-controller[0m
+Showing logs for build [32msimonjamesrowe-environment-simo-pdngt-1[0m stage [32mrelease[0m and container [32mstep-install-nginx-controller[0m
 Modified file /workspace/source/systems/**ing/Chart.yaml to set the chart to version 1
 creating the lock configmap **-lock-kube-system
 lock configmap **-lock-kube-system created
@@ -82,7 +82,7 @@ Verifying the helm requirements versions in dir: . using version stream URL: htt
 
 cleaning the lock configmap **-lock-kube-system
 
-Showing logs for build [32msimonjamesrowe-environment-simo-dszgh-1[0m stage [32mrelease[0m and container [32mstep-create-helm-values[0m
+Showing logs for build [32msimonjamesrowe-environment-simo-pdngt-1[0m stage [32mrelease[0m and container [32mstep-create-helm-values[0m
 defaulting to secret storage scheme local found from requirements file at /workspace/source/**-requirements.yml
 defaulting to secret base path to the cluster name simonjamesrowe found from requirements file at /workspace/source/**-requirements.yml
 generated schema file /workspace/source/env/parameters.schema.json from template /workspace/source/env/parameters.tmpl.schema.json
@@ -95,6 +95,7 @@ HMAC token, used to validate incoming webhooks. Press enter to use the generated
 AWS Access Key for Route 53 Access *** [Automatically accepted existing value]
 AWS Secret for Route 53 Access *** [Automatically accepted existing value]
 Route 53 zone id *** [Automatically accepted existing value]
+Root Password for mongoDB *** [Automatically accepted existing value]
 Do you want to configure non default Docker Registry? true [Automatically accepted existing value]
 Docker Registry Url harbor.simonjamesrowe.com [Automatically accepted existing value]
 Docker Registry username ***** [Automatically accepted existing value]
@@ -102,10 +103,10 @@ Docker Registry password *** [Automatically accepted existing value]
 Docker Registry email simon@simonjamesrowe.com [Automatically accepted existing value]
 WARNING: Unexpected registry auth URL harbor.simonjamesrowe.com - using it as registry push URL
 
-Showing logs for build [32msimonjamesrowe-environment-simo-dszgh-1[0m stage [32mrelease[0m and container [32mstep-create-install-values[0m
+Showing logs for build [32msimonjamesrowe-environment-simo-pdngt-1[0m stage [32mrelease[0m and container [32mstep-create-install-values[0m
 WARNING: Note that we have only tested TLS support on Google Container Engine with external-dns so far. This may not work!
 
-Showing logs for build [32msimonjamesrowe-environment-simo-dszgh-1[0m stage [32mrelease[0m and container [32mstep-install-external-dns[0m
+Showing logs for build [32msimonjamesrowe-environment-simo-pdngt-1[0m stage [32mrelease[0m and container [32mstep-install-external-dns[0m
 Modified file /workspace/source/systems/external-dns/Chart.yaml to set the chart to version 1
 creating the lock configmap **-lock-**
 lock configmap **-lock-** created
@@ -114,7 +115,7 @@ Adding missing Helm repo: charts.bitnami.com https://charts.bitnami.com/bitnami
 Successfully added Helm repository charts.bitnami.com.
 cleaning the lock configmap **-lock-**
 
-Showing logs for build [32msimonjamesrowe-environment-simo-dszgh-1[0m stage [32mrelease[0m and container [32mstep-install-cert-manager-crds[0m
+Showing logs for build [32msimonjamesrowe-environment-simo-pdngt-1[0m stage [32mrelease[0m and container [32mstep-install-cert-manager-crds[0m
 customresourcedefinition.apiextensions.k8s.io/challenges.acme.cert-manager.io configured
 customresourcedefinition.apiextensions.k8s.io/orders.acme.cert-manager.io configured
 customresourcedefinition.apiextensions.k8s.io/certificaterequests.cert-manager.io configured
@@ -122,7 +123,7 @@ customresourcedefinition.apiextensions.k8s.io/certificates.cert-manager.io confi
 customresourcedefinition.apiextensions.k8s.io/clusterissuers.cert-manager.io configured
 customresourcedefinition.apiextensions.k8s.io/issuers.cert-manager.io configured
 
-Showing logs for build [32msimonjamesrowe-environment-simo-dszgh-1[0m stage [32mrelease[0m and container [32mstep-install-cert-manager[0m
+Showing logs for build [32msimonjamesrowe-environment-simo-pdngt-1[0m stage [32mrelease[0m and container [32mstep-install-cert-manager[0m
 Modified file /workspace/source/systems/cm/Chart.yaml to set the chart to version 1
 creating the lock configmap **-lock-cert-manager
 lock configmap **-lock-cert-manager created
@@ -133,10 +134,10 @@ Successfully added Helm repository charts.jetstack.io.
 
 cleaning the lock configmap **-lock-cert-manager
 
-Showing logs for build [32msimonjamesrowe-environment-simo-dszgh-1[0m stage [32mrelease[0m and container [32mstep-create-acme-config[0m
+Showing logs for build [32msimonjamesrowe-environment-simo-pdngt-1[0m stage [32mrelease[0m and container [32mstep-create-acme-config[0m
 Saved the rendered configuration into values.yaml file
 
-Showing logs for build [32msimonjamesrowe-environment-simo-dszgh-1[0m stage [32mrelease[0m and container [32mstep-install-acme-issuer-and-certificate[0m
+Showing logs for build [32msimonjamesrowe-environment-simo-pdngt-1[0m stage [32mrelease[0m and container [32mstep-install-acme-issuer-and-certificate[0m
 Modified file /workspace/source/systems/acme/Chart.yaml to set the chart to version 1
 creating the lock configmap **-lock-**
 lock configmap **-lock-** created
@@ -145,39 +146,42 @@ Ignoring templates/cert-manager-prod-certificate.yaml
 Ignoring templates/cert-manager-prod-issuer.yaml
 Ignoring templates/cert-manager-staging-certificate.yaml
 Ignoring templates/cert-manager-staging-issuer.yaml
-No requirements file: /tmp/**-helm-apply-433853608/acme/requirements.yaml so not checking for missing versions
+No requirements file: /tmp/**-helm-apply-161620960/acme/requirements.yaml so not checking for missing versions
 
 cleaning the lock configmap **-lock-**
 
-Showing logs for build [32msimonjamesrowe-environment-simo-dszgh-1[0m stage [32mrelease[0m and container [32mstep-install-vault[0m
+Showing logs for build [32msimonjamesrowe-environment-simo-pdngt-1[0m stage [32mrelease[0m and container [32mstep-install-vault[0m
 Not attempting to boot Vault as using secret storage: local
 
-Showing logs for build [32msimonjamesrowe-environment-simo-dszgh-1[0m stage [32mrelease[0m and container [32mstep-create-jx-auth-config[0m
+Showing logs for build [32msimonjamesrowe-environment-simo-pdngt-1[0m stage [32mrelease[0m and container [32mstep-create-jx-auth-config[0m
 Saved the rendered configuration into templates/**-auth-configmap.yaml file
 
-Showing logs for build [32msimonjamesrowe-environment-simo-dszgh-1[0m stage [32mrelease[0m and container [32mstep-install-jx-auth-config[0m
+Showing logs for build [32msimonjamesrowe-environment-simo-pdngt-1[0m stage [32mrelease[0m and container [32mstep-install-jx-auth-config[0m
 Modified file /workspace/source/systems/**-auth/Chart.yaml to set the chart to version 1
 creating the lock configmap **-lock-**
 lock configmap **-lock-** created
 Ignoring templates/**-auth-configmap.yaml
-No requirements file: /tmp/**-helm-apply-131833092/**-auth/requirements.yaml so not checking for missing versions
+No requirements file: /tmp/**-helm-apply-523661545/**-auth/requirements.yaml so not checking for missing versions
 cleaning the lock configmap **-lock-**
 
-Showing logs for build [32msimonjamesrowe-environment-simo-dszgh-1[0m stage [32mrelease[0m and container [32mstep-install-jenkins-x[0m
+Showing logs for build [32msimonjamesrowe-environment-simo-pdngt-1[0m stage [32mrelease[0m and container [32mstep-install-jenkins-x[0m
 Modified file /workspace/source/env/Chart.yaml to set the chart to version 1
 creating the lock configmap **-lock-**
 lock configmap **-lock-** created
 Ignoring templates/.gitignore
+Ignoring templates/mongo-application-secrets.yaml
 Applying the kubernetes overrides at ../kubeProviders/kind/values.tmpl.yaml
 Verifying the helm requirements versions in dir: . using version stream URL: https://github.com/jenkins-x/jenkins-x-versions.git and git ref: v1.0.446
 Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
 Successfully added Helm repository chartmuseum.jenkins-x.io.
 Adding missing Helm repo: helm.goharbor.io https://helm.goharbor.io
 Successfully added Helm repository helm.goharbor.io.
+Adding missing Helm repo: helm.mittwald.de https://helm.mittwald.de
+Successfully added Helm repository helm.mittwald.de.
 
 cleaning the lock configmap **-lock-**
 
-Showing logs for build [32msimonjamesrowe-environment-simo-dszgh-1[0m stage [32mrelease[0m and container [32mstep-verify-jenkins-x-environment[0m
+Showing logs for build [32msimonjamesrowe-environment-simo-pdngt-1[0m stage [32mrelease[0m and container [32mstep-verify-jenkins-x-environment[0m
 Storing the requirements in team settings in the dev environment
 Validating git repository for dev environment at URL https://github.com/simonjamesrowe/environment-simonjamesrowe-dev.git
 Validating git repository for production environment at URL https://github.com/simonjamesrowe/environment-simonjamesrowe-production.git
@@ -199,22 +203,22 @@ Pushed Git repository to https://github.com/simonjamesrowe/environment-simonjame
 Environment git repositories look good
 
 
-Showing logs for build [32msimonjamesrowe-environment-simo-dszgh-1[0m stage [32mrelease[0m and container [32mstep-install-repositories[0m
+Showing logs for build [32msimonjamesrowe-environment-simo-pdngt-1[0m stage [32mrelease[0m and container [32mstep-install-repositories[0m
 Modified file /workspace/source/repositories/Chart.yaml to set the chart to version 1
 creating the lock configmap **-lock-**
 lock configmap **-lock-** created
 Ignoring templates/default-group.yaml
 Ignoring templates/simonjamesrowe-demo-sr.yaml
-No requirements file: /tmp/**-helm-apply-508592759/repositories/requirements.yaml so not checking for missing versions
+No requirements file: /tmp/**-helm-apply-966537252/repositories/requirements.yaml so not checking for missing versions
 WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
 Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
 Successfully added Helm repository jenkins-x-chartmuseum.
 
 cleaning the lock configmap **-lock-**
 
-Showing logs for build [32msimonjamesrowe-environment-simo-dszgh-1[0m stage [32mrelease[0m and container [32mstep-install-pipelines[0m
+Showing logs for build [32msimonjamesrowe-environment-simo-pdngt-1[0m stage [32mrelease[0m and container [32mstep-install-pipelines[0m
 
-Showing logs for build [32msimonjamesrowe-environment-simo-dszgh-1[0m stage [32mrelease[0m and container [32mstep-update-webhooks[0m
+Showing logs for build [32msimonjamesrowe-environment-simo-pdngt-1[0m stage [32mrelease[0m and container [32mstep-update-webhooks[0m
 DEBUG: Finding service url for hook in namespace **
 DEBUG: Couldn't find service url, attempting to look up via ingress
 DEBUG: found service url https://hook-**.simonjamesrowe.com
@@ -234,63 +238,75 @@ Updating webhooks for Owner: simonjamesrowe and Repository: environment-simonjam
 Checking hooks for repository simonjamesrowe/environment-simonjamesrowe-staging with user *************
 Found matching hook for url https://hook-**.simonjamesrowe.com/hook
 Updating GitHub webhook for simonjamesrowe/environment-simonjamesrowe-staging for url https://hook-**.simonjamesrowe.com/hook
+Updating webhooks for Owner: simonjamesrowe and Repository: strapi-cms in git server: https://github.com
+Checking hooks for repository simonjamesrowe/strapi-cms with user *************
+Found matching hook for url https://hook-**.simonjamesrowe.com/hook
+Updating GitHub webhook for simonjamesrowe/strapi-cms for url https://hook-**.simonjamesrowe.com/hook
 
-Showing logs for build [32msimonjamesrowe-environment-simo-dszgh-1[0m stage [32mrelease[0m and container [32mstep-verify-installation[0m
+Showing logs for build [32msimonjamesrowe-environment-simo-pdngt-1[0m stage [32mrelease[0m and container [32mstep-verify-installation[0m
 verifying the Jenkins X installation in namespace **
 verifying pods
 Checking pod statuses
-POD                                          STATUS
-jenkins-x-chartmuseum-5459d54d46-cdd7d       Running
-jenkins-x-controllerbuild-77df59c8cf-xmvdh   Running
-jenkins-x-controllerrole-76d7db654b-xhtk9    Running
-jenkins-x-gcactivities-1590647400-m2mtv      Succeeded
-jenkins-x-gcactivities-1590649200-gn6hk      Succeeded
-jenkins-x-gcpods-1590647400-6z8lr            Succeeded
-jenkins-x-gcpods-1590649200-mrn9s            Succeeded
-jenkins-x-harbor-core-76b4478df9-kch7j       Running
-jenkins-x-harbor-database-0                  Running
-jenkins-x-harbor-jobservice-5788fd4b4d-lxmqk Running
-jenkins-x-harbor-portal-6bc8b75447-7blb4     Running
-jenkins-x-harbor-redis-0                     Running
-jenkins-x-harbor-registry-5c8f9d4796-7kktv   Pending
-jenkins-x-harbor-registry-77d5688b7f-q2ws5   Running
-jenkins-x-heapster-6dff44fb9-rkwjk           Running
-jenkins-x-mongodb-74648958c-5xnpv            Running
-jenkins-x-nexus-847786fbc7-92p44             Running
-lighthouse-foghorn-699cf96548-vwbdd          Running
-lighthouse-keeper-56f6f9fd4b-plx4t           Running
-lighthouse-webhooks-68fbfdcb-sxzdk           Running
-lighthouse-webhooks-68fbfdcb-t8s4v           Running
-tekton-pipelines-controller-566bfd578-fdfxq  Running
+POD                                             STATUS
+jenkins-x-chartmuseum-5459d54d46-z9dp7          Running
+jenkins-x-controllerbuild-77df59c8cf-xwczr      Running
+jenkins-x-controllerrole-76d7db654b-bhzfb       Running
+jenkins-x-gcactivities-1592253000-49fnr         Succeeded
+jenkins-x-gcactivities-1592254800-v2kdz         Succeeded
+jenkins-x-gcpods-1592253000-l9mgl               Succeeded
+jenkins-x-gcpods-1592254800-5rcgb               Succeeded
+jenkins-x-gcpreviews-1592254800-dfs8z           Succeeded
+jenkins-x-harbor-core-65b9c5dd48-vxfqr          Running
+jenkins-x-harbor-database-0                     Running
+jenkins-x-harbor-jobservice-6bf49646d-ssfs7     Running
+jenkins-x-harbor-jobservice-756cf859c9-m5g67    Running
+jenkins-x-harbor-portal-6bc8b75447-fshdc        Running
+jenkins-x-harbor-redis-0                        Running
+jenkins-x-harbor-registry-76c74ff5f5-kbl45      Running
+jenkins-x-heapster-6dff44fb9-c2qjp              Running
+jenkins-x-kubernetes-replicator-8b7f55bb6-d7fgp Running
+jenkins-x-mongodb-d5548c4b-rc74f                Running
+jenkins-x-nexus-847786fbc7-lqcff                Running
+lighthouse-foghorn-699cf96548-d4jwk             Running
+lighthouse-keeper-56f6f9fd4b-4h2wm              Running
+lighthouse-webhooks-68fbfdcb-5dqws              Running
+lighthouse-webhooks-68fbfdcb-gcvcz              Running
+tekton-pipelines-controller-566bfd578-mfzzx     Running
 WARNING: the following pods are not ready:
-Pending: jenkins-x-harbor-registry-5c8f9d4796-7kktv
+Running: jenkins-x-harbor-jobservice-6bf49646d-ssfs7
 
 Waiting 30m0s for the pods to become ready...
 
 WARNING: retrying after error: the following pods are not ready:
-Pending: jenkins-x-harbor-registry-5c8f9d4796-7kktv
-POD                                          STATUS
-jenkins-x-chartmuseum-5459d54d46-cdd7d       Running
-jenkins-x-controllerbuild-77df59c8cf-xmvdh   Running
-jenkins-x-controllerrole-76d7db654b-xhtk9    Running
-jenkins-x-gcactivities-1590647400-m2mtv      Succeeded
-jenkins-x-gcactivities-1590649200-gn6hk      Succeeded
-jenkins-x-gcpods-1590647400-6z8lr            Succeeded
-jenkins-x-gcpods-1590649200-mrn9s            Succeeded
-jenkins-x-harbor-core-76b4478df9-kch7j       Running
-jenkins-x-harbor-database-0                  Running
-jenkins-x-harbor-jobservice-5788fd4b4d-lxmqk Running
-jenkins-x-harbor-portal-6bc8b75447-7blb4     Running
-jenkins-x-harbor-redis-0                     Running
-jenkins-x-harbor-registry-77d5688b7f-q2ws5   Running
-jenkins-x-heapster-6dff44fb9-rkwjk           Running
-jenkins-x-mongodb-74648958c-5xnpv            Running
-jenkins-x-nexus-847786fbc7-92p44             Running
-lighthouse-foghorn-699cf96548-vwbdd          Running
-lighthouse-keeper-56f6f9fd4b-plx4t           Running
-lighthouse-webhooks-68fbfdcb-sxzdk           Running
-lighthouse-webhooks-68fbfdcb-t8s4v           Running
-tekton-pipelines-controller-566bfd578-fdfxq  Running
+Running: jenkins-x-harbor-jobservice-6bf49646d-ssfs7
+WARNING: retrying after error: the following pods are not ready:
+Running: jenkins-x-harbor-jobservice-756cf859c9-m5g67
+POD                                             STATUS
+jenkins-x-chartmuseum-5459d54d46-z9dp7          Running
+jenkins-x-controllerbuild-77df59c8cf-xwczr      Running
+jenkins-x-controllerrole-76d7db654b-bhzfb       Running
+jenkins-x-gcactivities-1592253000-49fnr         Succeeded
+jenkins-x-gcactivities-1592254800-v2kdz         Succeeded
+jenkins-x-gcactivities-1592256600-4f794         Succeeded
+jenkins-x-gcpods-1592253000-l9mgl               Succeeded
+jenkins-x-gcpods-1592254800-5rcgb               Succeeded
+jenkins-x-gcpods-1592256600-clt2d               Succeeded
+jenkins-x-gcpreviews-1592254800-dfs8z           Succeeded
+jenkins-x-harbor-core-65b9c5dd48-vxfqr          Running
+jenkins-x-harbor-database-0                     Running
+jenkins-x-harbor-jobservice-6bf49646d-ssfs7     Running
+jenkins-x-harbor-portal-6bc8b75447-fshdc        Running
+jenkins-x-harbor-redis-0                        Running
+jenkins-x-harbor-registry-76c74ff5f5-kbl45      Running
+jenkins-x-heapster-6dff44fb9-c2qjp              Running
+jenkins-x-kubernetes-replicator-8b7f55bb6-d7fgp Running
+jenkins-x-mongodb-d5548c4b-rc74f                Running
+jenkins-x-nexus-847786fbc7-lqcff                Running
+lighthouse-foghorn-699cf96548-d4jwk             Running
+lighthouse-keeper-56f6f9fd4b-4h2wm              Running
+lighthouse-webhooks-68fbfdcb-5dqws              Running
+lighthouse-webhooks-68fbfdcb-gcvcz              Running
+tekton-pipelines-controller-566bfd578-mfzzx     Running
 Verifying the git config
 Verifying username ************* at git server github at https://github.com
 Found 1 organisations in git server https://github.com: simonjamesrowe
