@@ -1,0 +1,21 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: simonjamesrowe
+    provider: github
+    repository: react-ui
+  name: simonjamesrowe-react-ui
+spec:
+  description: Imported application for simonjamesrowe/react-ui
+  httpCloneURL: https://github.com/simonjamesrowe/react-ui.git
+  org: simonjamesrowe
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: react-ui
+  scheduler:
+    kind: ""
+    name: ""
+  url: git@github.com:simonjamesrowe/react-ui.git
