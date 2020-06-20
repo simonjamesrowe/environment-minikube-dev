@@ -5,3 +5,9 @@ dependencies:
   url: https://github.com/simonjamesrowe/demo.git
   version: ""
   versionURL: ""
+- host: github.com
+  owner: simonjamesrowe
+  repo: strapi-cms
+  url: https://github.com/simonjamesrowe/strapi-cms.git
+  version: ""
+  versionURL: ""
