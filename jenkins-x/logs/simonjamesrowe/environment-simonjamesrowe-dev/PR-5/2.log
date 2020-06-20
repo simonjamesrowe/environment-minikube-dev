@@ -1,0 +1,44 @@
+
+Showing logs for build [32msimonjamesrowe-environment-simo-crjcq-2[0m stage [32mpr-checks[0m and container [32mstep-credential-initializer-rn7gg[0m
+{"level":"info","ts":1592637645.580069,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1592637645.5807111,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32msimonjamesrowe-environment-simo-crjcq-2[0m stage [32mpr-checks[0m and container [32mstep-working-dir-initializer-d8nm9[0m
+{"level":"info","ts":1592637646.1518543,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1592637646.1532645,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32msimonjamesrowe-environment-simo-crjcq-2[0m stage [32mpr-checks[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32msimonjamesrowe-environment-simo-crjcq-2[0m stage [32mpr-checks[0m and container [32mstep-git-source-simonjamesrowe-environment-simo-crjcq-tchlc[0m
+{"level":"info","ts":1592637650.0756395,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1592637651.570568,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/simonjamesrowe/environment-simonjamesrowe-dev.git @ master in path /workspace/source"}
+
+Showing logs for build [32msimonjamesrowe-environment-simo-crjcq-2[0m stage [32mpr-checks[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:0e92b78dfa204e7ffd5e89f889214b7a6a625ec0,5:e8d81dbce194b416f6bcab1d4ac4332c48d41f62
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow e8d81dbce194b416f6bcab1d4ac4332c48d41f62: 0e92b78dfa204e7ffd5e89f889214b7a6a625ec0:
+DEBUG: ran git fetch --unshallow origin e8d81dbce194b416f6bcab1d4ac4332c48d41f62: 0e92b78dfa204e7ffd5e89f889214b7a6a625ec0: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard 0e92b78dfa204e7ffd5e89f889214b7a6a625ec0
+DEBUG: ran git reset --hard 0e92b78dfa204e7ffd5e89f889214b7a6a625ec0 in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge e8d81dbce194b416f6bcab1d4ac4332c48d41f62
+DEBUG: ran git merge e8d81dbce194b416f6bcab1d4ac4332c48d41f62 in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 0e92b78dfa204e7ffd5e89f889214b7a6a625ec0..HEAD
+Merged SHA e8d81dbce194b416f6bcab1d4ac4332c48d41f62 with commit message 'chore(deps): bump https://github.com/simonjamesrowe/react-ui.git' into base branch master
+Merged SHA ae36c68d10b793703ee335c0f55de89b19688261 with commit message 'chore(deps): bump https://github.com/simonjamesrowe/strapi-cms.git' into base branch master
+
+Showing logs for build [32msimonjamesrowe-environment-simo-crjcq-2[0m stage [32mpr-checks[0m and container [32mstep-verify-parameters[0m
+ERROR: (****): Must validate "then" as "if" was valid
+ERROR: docker.url: Does not match format 'uri'
+ERROR: (****): Must validate all the schemas (allOf)
+
+The "parameters.yaml" values file needs to be updated. You can regenerate the values file from schema "parameters.tmpl.schema.json" with command:
+
+** step create values --name parameters
+		
+error: verifying provided values file against schema file: invalid values
+[31m
+Pipeline failed on stage 'pr-checks' : container 'step-verify-parameters'. The execution of the pipeline has stopped.[0m
