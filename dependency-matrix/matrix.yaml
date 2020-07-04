@@ -7,7 +7,7 @@ dependencies:
   versionURL: ""
 - host: github.com
   owner: simonjamesrowe
-  repo: react-ui
-  url: https://github.com/simonjamesrowe/react-ui.git
+  repo: api-gateway
+  url: https://github.com/simonjamesrowe/api-gateway.git
   version: ""
   versionURL: ""
