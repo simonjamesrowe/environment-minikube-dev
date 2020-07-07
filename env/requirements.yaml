@@ -18,8 +18,8 @@ dependencies:
   repository: http://chartmuseum.jenkins-x.io
 - name: jenkins-x-platform
   repository: http://chartmuseum.jenkins-x.io
-- name: harbor
-  alias: harbor
+- alias: harbor
+  name: harbor
   repository: https://helm.goharbor.io
   version: 1.3.2
 - alias: mongodb
@@ -30,6 +30,6 @@ dependencies:
   name: kubernetes-replicator
   repository: https://helm.mittwald.de
   version: 2.3.0
-#- condition: chartmuseum.enabled
-#  name: chartmuseum
-#  repository: http://chartmuseum.jenkins-x.io
+- name: jx-app-ui
+  repository: http://chartmuseum.jenkins-x.io
+  version: 0.1.211
