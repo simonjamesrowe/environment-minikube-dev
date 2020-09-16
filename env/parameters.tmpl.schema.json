@@ -132,6 +132,18 @@
         }
       }
     },
+    "strapi": {
+      "type": "object",
+      "required" : ["jwtSigningKey"],
+      "properties": {
+        "jwtSigningKey": {
+          "type": "string",
+          "format": "password",
+          "title": "Jwt Signing Key for Strapi CMS",
+          "description": "Jwt Signing Key for Strapi CMS"
+        }
+      }
+    },
     "enableDocker": {
       "type": "boolean",
       "title": "Do you want to configure non default Docker Registry?",
