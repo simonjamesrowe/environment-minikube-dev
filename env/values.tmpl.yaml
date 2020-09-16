@@ -17,3 +17,6 @@ mongo:
   username: root
   port: "27017"
   hostname: jenkins-x-mongodb.jx
+
+cms:
+  jwtSigningKey: {{ .Parameters.strapi.jwtSigningKey}}

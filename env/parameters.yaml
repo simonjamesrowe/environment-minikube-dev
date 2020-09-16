@@ -19,3 +19,5 @@ pipelineUser:
   username: simonrowe-bot
 prow:
   hmacToken: local:simonjamesrowe/prow:hmacToken
+strapi:
+  jwtSigningKey: local:simonjamesrowe/strapi:jwtSigningKey
