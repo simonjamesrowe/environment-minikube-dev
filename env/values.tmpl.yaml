@@ -20,3 +20,19 @@ mongo:
 
 cms:
   jwtSigningKey: {{ .Parameters.strapi.jwtSigningKey}}
+
+elasticsearch:
+  esJavaOpts: -Xmx256m -Xms256m
+  replicas: 1
+  volumeClaimTemplate:
+    accessModes: [ "ReadWriteOnce" ]
+    resources:
+      requests:
+        storage: 5Gi
+  resources:
+    requests:
+      cpu: 500m
+      memory: 512Mi
+    limits:
+      cpu: 500m
+      memory: 512M
