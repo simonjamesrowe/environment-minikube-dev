@@ -5,6 +5,7 @@ jx init:
 	helm repo add stable https://kubernetes-charts.storage.googleapis.com
     helm repo add harbor https://helm.goharbor.io
     helm repo add mattwald https://helm.mittwald.de
+	helm repo add stable https://charts.helm.sh/stable
 
 build: clean init
 	jx step helm build --boot --provider-values-dir=../kubeProviders
