@@ -2,7 +2,6 @@ jx init:
 	helm init --client-only
 	helm repo add jenkins-x https://storage.googleapis.com/chartmuseum.jenkins-x.io
 	helm repo add bitnami https://charts.bitnami.com/bitnami
-	helm repo add stable https://kubernetes-charts.storage.googleapis.com
     helm repo add harbor https://helm.goharbor.io
     helm repo add mattwald https://helm.mittwald.de
 	helm repo add stable https://charts.helm.sh/stable
