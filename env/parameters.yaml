@@ -1,4 +1,5 @@
 adminUser:
+  htpasswd: local:simonjamesrowe/adminUser:htpasswd
   password: local:simonjamesrowe/adminUser:password
   username: admin
 aws:
