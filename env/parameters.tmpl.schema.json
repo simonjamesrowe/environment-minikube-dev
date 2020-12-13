@@ -9,7 +9,8 @@
       "type": "object",
       "required": [
         "username",
-        "password"
+        "password",
+        "htpasswd"
       ],
       "properties": {
         "username": {
@@ -23,6 +24,12 @@
           "format": "password",
           "title": "Jenkins X Admin Password",
           "description": "The Admin Password will be used by all services installed by Jenkins X"
+        },
+        "htpasswd": {
+          "type": "string",
+          "format": "password",
+          "title": "htpasswd for basic credentials for kibana",
+          "description": "htpasswd for basic credentials for kibana"
         }
       }
     },
