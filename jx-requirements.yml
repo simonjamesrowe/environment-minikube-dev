@@ -72,6 +72,6 @@ storage:
     url: ""
 vault: {}
 versionStream:
-  ref: v1.0.497
+  ref: v1.0.608
   url: https://github.com/jenkins-x/jenkins-x-versions.git
 webhook: lighthouse
