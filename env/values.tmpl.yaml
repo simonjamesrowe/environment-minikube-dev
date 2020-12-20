@@ -60,7 +60,7 @@ kibana:
       - secretName: tls-simonjamesrowe-com-p
         hosts:
          - kibana.simonjamesrowe.com
-kafka:
+cp-helm-charts:
   ## ------------------------------------------------------
   ## Zookeeper
   ## ------------------------------------------------------
@@ -97,17 +97,22 @@ kafka:
     securityContext:
       runAsUser: 0
 
-cp-schema-registry:
-  enabled: false
+  cp-schema-registry:
+    enabled: false
+    replicaCount: 0
 
-cp-kafka-rest:
-  enabled: false
+  cp-kafka-rest:
+    enabled: false
+    replicaCount: 0
 
-cp-kafka-connect:
-  enabled: false
+  cp-kafka-connect:
+    enabled: false
+    replicaCount: 0
 
-cp-ksql-server:
-  enabled: false
+  cp-ksql-server:
+    enabled: false
+    replicaCount: 0
 
-cp-control-center:
-  enabled: false
+  cp-control-center:
+    enabled: false
+    replicaCount: 0

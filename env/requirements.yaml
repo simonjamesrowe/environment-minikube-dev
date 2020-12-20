@@ -44,7 +44,6 @@ dependencies:
   repository: https://helm.elastic.co
   version: 7.10.0
 - name: cp-helm-charts
-  alias: kafka
   repository: https://confluentinc.github.io/cp-helm-charts/
   version: 0.6.0
 
