@@ -97,17 +97,17 @@ kafka:
     securityContext:
       runAsUser: 0
 
-  cp-schema-registry:
-    enabled: false
+cp-schema-registry:
+  enabled: false
 
-  cp-kafka-rest:
-    enabled: false
+cp-kafka-rest:
+  enabled: false
 
-  cp-kafka-connect:
-    enabled: false
+cp-kafka-connect:
+  enabled: false
 
-  cp-ksql-server:
-    enabled: false
+cp-ksql-server:
+  enabled: false
 
-  cp-control-center:
-    enabled: false
+cp-control-center:
+  enabled: false
