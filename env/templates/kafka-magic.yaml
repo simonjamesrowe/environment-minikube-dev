@@ -25,7 +25,7 @@ spec:
         livenessProbe:
           httpGet:
             path: /
-            port: 8080
+            port: 80
           initialDelaySeconds: 60
           periodSeconds: 10
           successThreshold: 1
@@ -33,7 +33,7 @@ spec:
         readinessProbe:
           httpGet:
             path: /
-            port: 8080
+            port: 80
           periodSeconds: 10
           successThreshold: 1
           timeoutSeconds: 1
@@ -43,15 +43,39 @@ kind: Service
 metadata:
   name: kafka-magic
   annotations:
-    fabric8.io/expose: "true"
-    fabric8.io/ingress.annotations: "kubernetes.io/ingress.class: nginx\nnginx.ingress.kubernetes.io/auth-type: basic\nnginx.ingress.kubernetes.io/auth-secret: basic-auth\nnginx.ingress.kubernetes.io/auth-realm: 'Authentication Required'"
+    fabric8.io/expose: "false"
 spec:
   type: ClusterIP
   ports:
   - port: 80
-    targetPort: 8080
+    targetPort: 80
     protocol: TCP
     name: http
   selector:
     app: kafka-magic
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/auth-realm: Authentication Required
+    nginx.ingress.kubernetes.io/auth-secret: basic-auth
+    nginx.ingress.kubernetes.io/auth-type: basic
+  labels:
+    app: kafka-magic
+  name: kafka-magic
+spec:
+  rules:
+  - host: kafka-magic.simonjamesrowe.com
+    http:
+      paths:
+      - backend:
+          serviceName: kafka-magic
+          servicePort: 80
+        path: /
+  tls:
+  - hosts:
+    - kafka-magic.simonjamesrowe.com
+    secretName: tls-simonjamesrowe-com-p
 
