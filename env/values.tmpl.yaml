@@ -60,3 +60,54 @@ kibana:
       - secretName: tls-simonjamesrowe-com-p
         hosts:
          - kibana.simonjamesrowe.com
+kafka:
+  ## ------------------------------------------------------
+  ## Zookeeper
+  ## ------------------------------------------------------
+  cp-zookeeper:
+    enabled: true
+    servers: 1
+    heapOptions: "-Xms128M -Xmx128M"
+    persistence:
+      enabled: true
+      dataDirSize: 5Gi
+      dataLogDirSize: 5Gi
+    resources:
+      limits:
+        cpu: 100m
+        memory: 128Mi
+      requests:
+        cpu: 100m
+        memory: 128Mi
+  cp-kafka:
+    enabled: true
+    brokers: 1
+    heapOptions: "-Xms256M -Xmx256M"
+    persistence:
+      enabled: true
+      size: 5Gi
+      disksPerBroker: 1
+    resources:
+      limits:
+        cpu: 200m
+        memory: 256Mi
+      requests:
+        cpu: 200m
+        memory: 256Mi
+    securityContext:
+      runAsUser: 0
+
+  cp-schema-registry:
+    enabled: false
+
+  cp-kafka-rest:
+    enabled: false
+
+  cp-kafka-connect:
+    enabled: false
+
+  cp-ksql-server:
+    enabled: false
+
+  cp-control-center:
+    enabled: false
