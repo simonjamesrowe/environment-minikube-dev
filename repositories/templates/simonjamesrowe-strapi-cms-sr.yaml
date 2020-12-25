@@ -1,0 +1,23 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  annotations:
+    jenkins.io/last-build-number-for-master: "2"
+  creationTimestamp: null
+  labels:
+    owner: simonjamesrowe
+    provider: github
+    repository: strapi-cms
+  name: simonjamesrowe-strapi-cms
+spec:
+  description: Imported application for simonjamesrowe/strapi-cms
+  httpCloneURL: https://github.com/simonjamesrowe/strapi-cms.git
+  org: simonjamesrowe
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: strapi-cms
+  scheduler:
+    kind: ""
+    name: ""
+  url: git@github.com:simonjamesrowe/strapi-cms.git

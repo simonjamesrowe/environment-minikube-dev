@@ -5,3 +5,9 @@ dependencies:
   url: https://github.com/simonjamesrowe/demo.git
   version: ""
   versionURL: ""
+- host: github.com
+  owner: simonjamesrowe
+  repo: component-test
+  url: https://github.com/simonjamesrowe/component-test.git
+  version: ""
+  versionURL: ""
