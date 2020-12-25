@@ -1,0 +1,94 @@
+
+Showing logs for build [32msimonjamesrowe-environment-simo-glwcj-6[0m stage [32mpr-checks[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1608932862.7507036,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32msimonjamesrowe-environment-simo-glwcj-6[0m stage [32mpr-checks[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32msimonjamesrowe-environment-simo-glwcj-6[0m stage [32mpr-checks[0m and container [32mplace-tools[0m
+
+Showing logs for build [32msimonjamesrowe-environment-simo-glwcj-6[0m stage [32mpr-checks[0m and container [32mstep-git-source-simonjamesrowe-environment-simo-glwcj-sgnwj[0m
+{"level":"info","ts":1608932869.752055,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/simonjamesrowe/environment-simonjamesrowe-dev.git @ master in path /workspace/source"}
+{"level":"warn","ts":1608932869.7522366,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /****/.ssh: file exists"}
+{"level":"info","ts":1608932869.8032377,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32msimonjamesrowe-environment-simo-glwcj-6[0m stage [32mpr-checks[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32msimonjamesrowe-environment-simo-glwcj-6[0m stage [32mpr-checks[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:6e77fe53ec4fc0b5158c7ba8334e1915de2ae8be,5:f84fe559ebb2e53ab066a71175288b33a0a3e012
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow f84fe559ebb2e53ab066a71175288b33a0a3e012: 6e77fe53ec4fc0b5158c7ba8334e1915de2ae8be:
+DEBUG: ran git fetch --unshallow origin f84fe559ebb2e53ab066a71175288b33a0a3e012: 6e77fe53ec4fc0b5158c7ba8334e1915de2ae8be: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard 6e77fe53ec4fc0b5158c7ba8334e1915de2ae8be
+DEBUG: ran git reset --hard 6e77fe53ec4fc0b5158c7ba8334e1915de2ae8be in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge f84fe559ebb2e53ab066a71175288b33a0a3e012
+DEBUG: ran git merge f84fe559ebb2e53ab066a71175288b33a0a3e012 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 6e77fe53ec4fc0b5158c7ba8334e1915de2ae8be..HEAD
+Merged SHA fbb2e9630a9015da30b2d8739c16861d409b27f3 with commit message 'Merge commit 'f84fe559ebb2e53ab066a71175288b33a0a3e012'' into base branch master
+Merged SHA f84fe559ebb2e53ab066a71175288b33a0a3e012 with commit message 'chore(deps): bump https://github.com/simonjamesrowe/component-test.git' into base branch master
+Merged SHA c5735867d6efaf78edab39f84ea5a9e1133bd59c with commit message 'chore(config): update configuration' into base branch master
+Merged SHA 8dbdbe5819f6488611bca9a40b1dcd363c819db2 with commit message 'chore(config): update configuration' into base branch master
+Merged SHA 04a6ecb8f99547f8365aa43cee0322a92801b1e7 with commit message 'chore(config): update configuration' into base branch master
+Merged SHA f188ffbac8c9a66bcc957379b50a494dbce7de08 with commit message 'chore(config): update configuration' into base branch master
+Merged SHA d34817ee3a6279455bbf69093f8097b40378e96c with commit message 'chore(config): update configuration' into base branch master
+Merged SHA dfaee98a49170aa43b8f17f89d27346c79932732 with commit message 'chore(config): update configuration' into base branch master
+Merged SHA 712c97d76645119d1ba87477d83f12a8d419ad5a with commit message 'chore(config): update configuration' into base branch master
+Merged SHA 4228951a13649ac6b77d55616ad35d1934f926b0 with commit message 'chore(config): update configuration' into base branch master
+Merged SHA 85e2c1eb59f494cba91dfa5ee6570fc072aebd3d with commit message 'chore(config): update configuration' into base branch master
+Merged SHA 3688097a67c460d657edbedfd4440b19f9cb75b2 with commit message 'chore(config): update configuration' into base branch master
+Merged SHA bd4ce85aad421cf8b4cea53dbc13af29854ce086 with commit message 'chore(config): update configuration' into base branch master
+Merged SHA 4e68834907f2024cca8afb4e1c6c1bda417273f2 with commit message 'chore(config): update configuration' into base branch master
+Merged SHA f8d346cfcd67f37e5e7ac6fc26260dcafaa08e7b with commit message 'another attempt at installing elasticsearch in control plane.' into base branch master
+Merged SHA 550fa3e70a3ef8d55685779132b69e41728923db with commit message 'update ** versions stream.' into base branch master
+Merged SHA 729aefd9c048b24bd1248c4f4df3306371601b94 with commit message 'two repos with id stable. remove one of them.' into base branch master
+Merged SHA db5ee4ccbe005461526a4e42ace32f32f2ca56d5 with commit message 'remove velero' into base branch master
+Merged SHA 2bab4e6e85a1c0cf17f7b95a3874b314ad8220d5 with commit message 'chore: move to new stable helm repository (#174)' into base branch master
+Merged SHA 1162766de88246efebb8026d535ef89f454b5f1c with commit message 'fix(pencil): Fixed Velero values for AKS boot Ensured initContainers in Velero values are only outputted if a namespace is defined for Velero' into base branch master
+Merged SHA f8e17086bf9b9a56b0acdd24da94dfd19d94603a with commit message 'chore: Add lighthouse-**' into base branch master
+Merged SHA 54264233e553bd66d12e6e8e689fa22c719a034d with commit message 'feat(pencil): Added in external dns secret name for Azure DNS provider' into base branch master
+Merged SHA 78787dc663eff4d4b7bac5a54f931aaf7362c05d with commit message 'up to date installation on IBM Cloud Kubernetes Service (IKS)' into base branch master
+Merged SHA 403f2c00cb647c8d6cd382df724ae5c7541fdb94 with commit message 'up to date installation on IBM Cloud Kubernetes Service (IKS)' into base branch master
+Merged SHA 10bd2839ff8b6043ef44b7adf5c60eb4b55a490c with commit message 'up to date installation on IBM Cloud Kubernetes Service (IKS)' into base branch master
+Merged SHA a5bef02054b339760148f215a82c63eff4b1fc8f with commit message 'suppress old DOCKER_REGISTRY definition' into base branch master
+Merged SHA dfc416cfccdb81e693cf85aea1afc94425dc13e4 with commit message 'feat: add manifests to be used when installing Jenkins X on a restricted permissions openshift cluster' into base branch master
+Merged SHA 0062028c30fda6fb5bf8ad9812dfa9bff9bbb652 with commit message 'feat: add docker config for external registries for Kubernetes and AKS' into base branch master
+Merged SHA a9229facfcedf0f40b5b9373e83333d404a2520c with commit message 'add elastic search to the control plane.' into base branch master
+Merged SHA 248d058a28c0fbee328036d863eae9aedc1bac22 with commit message 'chore(config): update configuration' into base branch master
+Merged SHA ebb11e240f611cda98507828ab56c94d4e5d5000 with commit message 'Add app **-app-ui 0.1.211' into base branch master
+Merged SHA 7aee2f2fe6cf2e4faa287c550324def20092dd31 with commit message 'chore(deps): bump https://github.com/simonjamesrowe/api-gateway.git' into base branch master
+Merged SHA 5417683f203b074e5a54cf2be9e85d26e4ced4a1 with commit message 'chore(deps): bump https://github.com/simonjamesrowe/api-gateway.git' into base branch master
+Merged SHA 99fb8a2a430ba65712885b0df285735df785770d with commit message 'chore(deps): bump https://github.com/simonjamesrowe/api-gateway.git' into base branch master
+Merged SHA e8d81dbce194b416f6bcab1d4ac4332c48d41f62 with commit message 'chore(deps): bump https://github.com/simonjamesrowe/react-ui.git' into base branch master
+Merged SHA ae36c68d10b793703ee335c0f55de89b19688261 with commit message 'chore(deps): bump https://github.com/simonjamesrowe/strapi-cms.git' into base branch master
+
+Showing logs for build [32msimonjamesrowe-environment-simo-glwcj-6[0m stage [32mpr-checks[0m and container [32mstep-verify-parameters[0m
+error: resolve the secrets URIs: replacing secrets URIs: replacing vault paths in *****User:
+  htpasswd: local:simonjamesrowe/*****User:htpasswd
+  password: local:simonjamesrowe/*****User:password
+  username: *****
+aws:
+  accessKeyId: local:simonjamesrowe/aws:accessKeyId
+  accessSecret: local:simonjamesrowe/aws:accessSecret
+  hostedZoneId: local:simonjamesrowe/aws:hostedZoneId
+docker:
+  email: simon@simonjamesrowe.com
+  password: local:simonjamesrowe/docker:password
+  url: harbor.simonjamesrowe.com
+  username: *****
+enableDocker: true
+mongo:
+  ****Password: local:simonjamesrowe/mongo:****Password
+pipelineUser:
+  email: simon@simonjamesrowe.com
+  token: local:simonjamesrowe/pipelineUser:token
+  username: *************
+prow:
+  hmacToken: local:simonjamesrowe/prow:hmacToken
+strapi:
+  jwtSigningKey: local:simonjamesrowe/strapi:jwtSigningKey
+: unable to find "htpasswd" in secret at "simonjamesrowe/*****User"
+[31m
+Pipeline failed on stage 'pr-checks' : container 'step-verify-parameters'. The execution of the pipeline has stopped.[0m
