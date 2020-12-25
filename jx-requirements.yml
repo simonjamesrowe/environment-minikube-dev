@@ -2,6 +2,11 @@ autoUpdate:
   enabled: false
   schedule: ""
 bootConfigURL: https://github.com/simonjamesrowe/environment-simonjamesrowe-dev
+buildPacks:
+  buildPackLibrary:
+    gitRef: main
+    gitURL: https://github.com/simonjamesrowe/jenkinsx-buildpacks.git
+    name: simonjamesrowe
 cluster:
   clusterName: simonjamesrowe
   devEnvApprovers:
