@@ -34,9 +34,96 @@ nexus:
 {{- end }}
 
 
+gradle:
+  initScript: |-
+    allprojects {
+
+        apply plugin: 'maven-publish'
+
+        repositories {
+            maven {
+                url "http://nexus/repository/maven-group/"
+            }
+            mavenCentral()
+        }
+
+      publishing {
+            repositories {
+                maven {
+                    def releasesRepoUrl = "http://nexus/repository/maven-releases/"
+                    def snapshotsRepoUrl = "http://nexus/repository/maven-snapshots/"
+                    url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
+                    credentials {
+                        username "{{ .Parameters.adminUser.username }}"
+                        password "{{ .Parameters.adminUser.password }}"
+                    }
+                }
+            }
+        }
+
+       configurations.all {
+          resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+          resolutionStrategy.cacheDynamicVersionsFor 0, 'seconds'
+       }
+    }
+
 jenkins:
   Master:
     AdminPassword: "{{ .Parameters.adminUser.password }}"
+  Agent:
+    PodTemplates:
+      Gradle6-Java11:
+        Name: gradle
+        Label: jenkins-gradle6-java11
+        DevPodPorts: 5005, 8080
+        volumes:
+          - type: Secret
+            secretName: jenkins-docker-cfg
+            mountPath: /home/jenkins/.docker
+          - type: Secret
+            secretName: jenkins-release-gpg
+            mountPath: /home/jenkins/.gnupg
+          - type: Secret
+            secretName: jenkins-gradle-init
+            mountPath: /home/jenkins/.gradle
+        EnvVars:
+          JENKINS_URL: http://jenkins:8080
+          _JAVA_OPTIONS: '-XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Dsun.zip.disableMemoryMapping=true -XX:+UseParallelGC -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Xms10m -Xmx192m'
+          GIT_COMMITTER_EMAIL: jenkins-x@googlegroups.com
+          GIT_AUTHOR_EMAIL: jenkins-x@googlegroups.com
+          GIT_AUTHOR_NAME: jenkins-x-bot
+          GIT_COMMITTER_NAME: jenkins-x-bot
+          XDG_CONFIG_HOME: /home/jenkins
+          DOCKER_CONFIG: /home/jenkins/.docker/
+        ServiceAccount: jenkins
+        # Node labels and tolerations for pod assignment
+        # ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#nodeselector
+        # ref: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+        # NodeSelector:
+        #   dedicated: jenkins-x-builder
+        # Tolerations:
+        # - effect: NoSchedule
+        #   key: dedicated
+        #   operator: Equal
+        #   value: jenkins-x-builder
+        Containers:
+          Jnlp:
+            Image: jenkinsci/jnlp-slave:3.26-1-alpine
+            RequestCpu: "100m"
+            RequestMemory: "128Mi"
+            Args: '${computer.jnlpmac} ${computer.name}'
+          Gradle:
+            Image: simonrowe83/jenkinsx-gradle6-jdk11:latest
+            Privileged: true
+            RequestCpu: "400m"
+            RequestMemory: "512Mi"
+            LimitCpu: "1"
+            LimitMemory: "1024Mi"
+            # You may want to change this to true while testing a new image
+            # AlwaysPullImage: true
+            Command: "/bin/sh -c"
+            Args: "cat"
+            Tty: true
 
 PipelineSecrets:
     GitCreds: https://{{ .Parameters.pipelineUser.username }}:{{ .Parameters.pipelineUser.token }}@{{ trimPrefix "https://" .Requirements.cluster.gitServer | default "https://github.com" |  }}
