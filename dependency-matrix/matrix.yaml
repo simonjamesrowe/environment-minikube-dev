@@ -7,7 +7,7 @@ dependencies:
   versionURL: ""
 - host: github.com
   owner: simonjamesrowe
-  repo: api-gateway
-  url: https://github.com/simonjamesrowe/api-gateway.git
+  repo: component-test
+  url: https://github.com/simonjamesrowe/component-test.git
   version: ""
   versionURL: ""
