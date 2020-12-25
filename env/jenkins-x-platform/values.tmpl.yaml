@@ -39,7 +39,7 @@ jenkins:
   Agent:
     PodTemplates:
       Gradle6-Java11:
-        Name: gradle
+        Name: gradle6-java11
         Label: jenkins-gradle6-java11
         DevPodPorts: 5005, 8080
         volumes:
