@@ -77,7 +77,7 @@ jenkins:
             RequestCpu: "100m"
             RequestMemory: "128Mi"
             Args: '${computer.jnlpmac} ${computer.name}'
-          Gradle:
+          Gradle6-Java11:
             Image: simonrowe83/jenkinsx-gradle6-jdk11:latest
             Privileged: true
             RequestCpu: "400m"
