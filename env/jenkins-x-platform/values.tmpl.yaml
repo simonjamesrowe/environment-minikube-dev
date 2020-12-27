@@ -38,6 +38,8 @@ jenkins:
   Master:
     AdminPassword: "{{ .Parameters.adminUser.password }}"
   Agent:
+    DockerHostPath:
+    DockerMountPath:
     PodTemplates:
       Gradle6-Java11:
         Name: gradle6-java11
@@ -61,6 +63,7 @@ jenkins:
           GIT_COMMITTER_NAME: jenkins-x-bot
           XDG_CONFIG_HOME: /home/jenkins
           DOCKER_CONFIG: /home/jenkins/.docker/
+          DOCKER_HOST:  tcp://localhost:2375
         ServiceAccount: jenkins
         # Node labels and tolerations for pod assignment
         # ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#nodeselector
@@ -73,11 +76,13 @@ jenkins:
         #   operator: Equal
         #   value: jenkins-x-builder
         Containers:
-          Jnlp:
-            Image: jenkinsci/jnlp-slave:3.26-1-alpine
+          Dind:
+            Image: docker:dind
             RequestCpu: "100m"
             RequestMemory: "128Mi"
-            Args: '${computer.jnlpmac} ${computer.name}'
+            Privileged: true
+            Command: "sleep"
+            Args: "98d"
           Gradle6-Java11:
             Image: simonrowe83/jenkinsx-gradle6-jdk11:2020-12-26
             Privileged: true
