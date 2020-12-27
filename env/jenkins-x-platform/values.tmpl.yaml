@@ -38,8 +38,6 @@ jenkins:
   Master:
     AdminPassword: "{{ .Parameters.adminUser.password }}"
   Agent:
-    DockerHostPath:
-    DockerMountPath:
     PodTemplates:
       Gradle6-Java11:
         Name: gradle6-java11
@@ -75,6 +73,11 @@ jenkins:
         #   operator: Equal
         #   value: jenkins-x-builder
         Containers:
+          Jnlp:
+            Image: jenkinsci/jnlp-slave:3.26-1-alpine
+            RequestCpu: "100m"
+            RequestMemory: "128Mi"
+            Args: '${computer.jnlpmac} ${computer.name}'
           Gradle6-Java11:
             Image: simonrowe83/jenkinsx-gradle6-jdk11:2020-12-26
             Privileged: true
@@ -87,12 +90,6 @@ jenkins:
             Command: "/bin/sh -c"
             Args: "cat"
             Tty: true
-          Docker:
-            Image: docker:dind
-            RequestCpu: "100m"
-            RequestMemory: "128Mi"
-            Privileged: true
-
       ## This is temp fix for builder image updates
       aws-cdk:
         Name: aws-cdk
