@@ -81,8 +81,7 @@ jenkins:
             RequestCpu: "100m"
             RequestMemory: "128Mi"
             Privileged: true
-            Command: "sleep"
-            Args: "98d"
+            WorkingDir: /home/jenkins
           Gradle6-Java11:
             Image: simonrowe83/jenkinsx-gradle6-jdk11:2020-12-26
             Privileged: true
