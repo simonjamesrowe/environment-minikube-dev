@@ -76,12 +76,6 @@ jenkins:
         #   operator: Equal
         #   value: jenkins-x-builder
         Containers:
-          Dind:
-            Image: docker:dind
-            RequestCpu: "100m"
-            RequestMemory: "128Mi"
-            Privileged: true
-            WorkingDir: /home/jenkins
           Gradle6-Java11:
             Image: simonrowe83/jenkinsx-gradle6-jdk11:2020-12-26
             Privileged: true
@@ -94,6 +88,14 @@ jenkins:
             Command: "/bin/sh -c"
             Args: "cat"
             Tty: true
+          TestContainers:
+            Image: docker:dind
+            RequestCpu: "100m"
+            RequestMemory: "128Mi"
+            Privileged: true
+            WorkingDir: /home/jenkins
+            Command: "sleep"
+            Args: "99d"
       ## This is temp fix for builder image updates
       aws-cdk:
         Name: aws-cdk
