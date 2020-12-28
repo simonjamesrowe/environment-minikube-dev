@@ -34,9 +34,9 @@ dependencies:
   name: kubernetes-replicator
   repository: https://helm.mittwald.de
   version: 2.3.0
-- name: jx-app-ui
-  repository: http://chartmuseum.jenkins-x.io
-  version: 0.1.211
+- name: jx-pipelines-visualizer
+  repository: https://storage.googleapis.com/jenkinsxio/charts/
+  version: 0.0.30
 - name: elasticsearch
   repository: https://helm.elastic.co
   version: 7.10.0
