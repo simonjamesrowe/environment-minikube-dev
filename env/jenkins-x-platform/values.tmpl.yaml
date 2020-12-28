@@ -38,8 +38,6 @@ jenkins:
   Master:
     AdminPassword: "{{ .Parameters.adminUser.password }}"
   Agent:
-    DockerHostPath:
-    DockerMountPath:
     PodTemplates:
       Gradle6-Java11:
         Name: gradle6-java11
