@@ -63,7 +63,6 @@ jenkins:
           GIT_COMMITTER_NAME: jenkins-x-bot
           XDG_CONFIG_HOME: /home/jenkins
           DOCKER_CONFIG: /home/jenkins/.docker/
-          DOCKER_HOST:  tcp://localhost:2375
         ServiceAccount: jenkins
         # Node labels and tolerations for pod assignment
         # ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#nodeselector
