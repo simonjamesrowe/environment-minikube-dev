@@ -5,17 +5,17 @@ metadata:
   labels:
     owner: simonjamesrowe
     provider: github
-    repository: demo
-  name: simonjamesrowe-demo
+    repository: strapi-cms
+  name: simonjamesrowe-strapi-cms
 spec:
-  description: Imported application for simonjamesrowe/demo
-  httpCloneURL: https://github.com/simonjamesrowe/demo.git
+  description: Imported application for simonjamesrowe/strapi-cms
+  httpCloneURL: https://github.com/simonjamesrowe/strapi-cms.git
   org: simonjamesrowe
   provider: https://github.com
   providerKind: github
   providerName: github
-  repo: demo
+  repo: strapi-cms
   scheduler:
     kind: ""
     name: ""
-  url: https://github.com/simonjamesrowe/demo.git
+  url: https://github.com/simonjamesrowe/strapi-cms.git

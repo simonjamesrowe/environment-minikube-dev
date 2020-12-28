@@ -1,13 +1,25 @@
 dependencies:
 - host: github.com
   owner: simonjamesrowe
-  repo: demo
-  url: https://github.com/simonjamesrowe/demo.git
+  repo: api-gateway
+  url: https://github.com/simonjamesrowe/api-gateway.git
   version: ""
   versionURL: ""
 - host: github.com
   owner: simonjamesrowe
-  repo: api-gateway
-  url: https://github.com/simonjamesrowe/api-gateway.git
+  repo: react-ui
+  url: https://github.com/simonjamesrowe/react-ui.git
+  version: ""
+  versionURL: ""
+- host: github.com
+  owner: simonjamesrowe
+  repo: strapi-cms
+  url: https://github.com/simonjamesrowe/strapi-cms.git
+  version: ""
+  versionURL: ""
+- host: github.com
+  owner: simonjamesrowe
+  repo: component-test
+  url: https://github.com/simonjamesrowe/component-test.git
   version: ""
   versionURL: ""
