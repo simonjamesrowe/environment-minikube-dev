@@ -1,0 +1,55 @@
+
+Showing logs for build [32msimonjamesrowe-environment-simo-z75k7-38[0m stage [32mrelease[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1609169540.3515162,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32msimonjamesrowe-environment-simo-z75k7-38[0m stage [32mrelease[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32msimonjamesrowe-environment-simo-z75k7-38[0m stage [32mrelease[0m and container [32mplace-tools[0m
+
+Showing logs for build [32msimonjamesrowe-environment-simo-z75k7-38[0m stage [32mrelease[0m and container [32mstep-git-source-simonjamesrowe-environment-simo-z75k7-xnht8[0m
+{"level":"info","ts":1609169550.6981304,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/simonjamesrowe/environment-simonjamesrowe-dev.git @ v1.0.145 in path /workspace/source"}
+{"level":"warn","ts":1609169550.6983697,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /****/.ssh: file exists"}
+{"level":"info","ts":1609169550.7563503,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32msimonjamesrowe-environment-simo-z75k7-38[0m stage [32mrelease[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32msimonjamesrowe-environment-simo-z75k7-38[0m stage [32mrelease[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:b34cc1b0eeae9ac3a9d5449b064f1e21302be4e5
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32msimonjamesrowe-environment-simo-z75k7-38[0m stage [32mrelease[0m and container [32mstep-validate-git[0m
+Git configured for user: jenkins-x-bot and email jenkins-x@googlegroups.com
+
+Showing logs for build [32msimonjamesrowe-environment-simo-z75k7-38[0m stage [32mrelease[0m and container [32mstep-verify-preinstall[0m
+** boot has only been validated on GKE and EKS, we'd love feedback and contributions for other Kubernetes providers
+Running in Batch Mode, execution will continue
+writing the following to the OWNERS file for the development environment repository:
+approvers:
+- simonrowe
+reviewers:
+- simonrowe
+Verifying the kubernetes cluster before we try to boot Jenkins X in namespace: **
+Trying to lazily create any missing resources to get the current cluster ready to boot Jenkins X
+Verifying Ingress...
+
+Using namespace '**' from context named '' on server ''.
+
+Installing kubectl
+Downloading https://storage.googleapis.com/kubernetes-release/release/v1.16.5/bin/linux/amd64/kubectl to /tekton/home/.**/bin/kubectl...
+Downloaded /tekton/home/.**/bin/kubectl
+Installing helm
+Downloading https://get.helm.sh/helm-v2.16.9-linux-amd64.tar.gz to /tekton/home/.**/bin/helm.tgz...
+Downloaded /tekton/home/.**/bin/helm.tgz
+Installing helm secrets plugin
+error: error installing helm: failed to initialize helm: failed to run 'helm init --client-only' command in directory '', output: 'Creating /tekton/home/.helm 
+Creating /tekton/home/.helm/repository 
+Creating /tekton/home/.helm/repository/cache 
+Creating /tekton/home/.helm/repository/local 
+Creating /tekton/home/.helm/plugins 
+Creating /tekton/home/.helm/starters 
+Creating /tekton/home/.helm/cache/archive 
+Creating /tekton/home/.helm/repository/repositories.yaml 
+Adding stable repo with URL: https://kubernetes-charts.storage.googleapis.com 
+Error: error initializing: Looks like "https://kubernetes-charts.storage.googleapis.com" is not a valid chart repository or cannot be reached: Failed to fetch https://kubernetes-charts.storage.googleapis.com/index.yaml : 403 Forbidden'
+[31m
+Pipeline failed on stage 'release' : container 'step-verify-preinstall'. The execution of the pipeline has stopped.[0m
