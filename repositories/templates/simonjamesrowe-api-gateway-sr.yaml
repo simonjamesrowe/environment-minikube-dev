@@ -1,0 +1,21 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: simonjamesrowe
+    provider: github
+    repository: api-gateway
+  name: simonjamesrowe-api-gateway
+spec:
+  description: Imported application for simonjamesrowe/api-gateway
+  httpCloneURL: https://github.com/simonjamesrowe/api-gateway.git
+  org: simonjamesrowe
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: api-gateway
+  scheduler:
+    kind: ""
+    name: ""
+  url: https://github.com/simonjamesrowe/api-gateway.git
