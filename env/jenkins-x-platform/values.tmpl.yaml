@@ -75,7 +75,7 @@ jenkins:
         #   value: jenkins-x-builder
         Containers:
           Gradle6-Java11:
-            Image: simonrowe83/jenkinsx-gradle6-jdk11:2020-12-26
+            Image: harbor.simonjamesrowe.com/simonjamesrowe/gradle6-java11:2020-12-26
             Privileged: true
             RequestCpu: "400m"
             RequestMemory: "512Mi"
