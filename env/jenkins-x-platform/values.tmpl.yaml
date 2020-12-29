@@ -200,7 +200,6 @@ jenkins:
             mountPath: /home/jenkins/.gnupg
         EnvVars:
           JENKINS_URL: http://jenkins:8080
-          _JAVA_OPTIONS: '-XX:+UnlockExperimentalVMOptions -Dsun.zip.disableMemoryMapping=true -XX:+UseParallelGC -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Xms10m -Xmx192m'
           GIT_COMMITTER_EMAIL: jenkins-x@googlegroups.com
           GIT_AUTHOR_EMAIL: jenkins-x@googlegroups.com
           GIT_AUTHOR_NAME: jenkins-x-bot
@@ -229,7 +228,7 @@ jenkins:
             RequestMemory: "128Mi"
             Args: '${computer.jnlpmac} ${computer.name}'
           Maven:
-            Image: gcr.io/jenkinsxio/builder-maven-java11:2.1.155-777
+            Image: harbor.simonjamesrowe.com/simonjamesrowe/maven-java11-node:2020-12-29
             Privileged: true
             RequestCpu: "400m"
             RequestMemory: "512Mi"
