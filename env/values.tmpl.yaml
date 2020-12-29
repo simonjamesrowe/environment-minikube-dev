@@ -151,13 +151,6 @@ gradle:
     }
 
 octant:
-  plugins:
-    install:
-    - https://github.com/aquasecurity/starboard-octant-plugin/releases/download/v0.6.0/starboard-octant-plugin_linux_x86_64.tar.gz
-    dir:
-      mount:
-        emptyDir: { }
-      mountPath: /home/octant/.config/octant/plugins/
   ingress:
     enabled: true
     annotations:
