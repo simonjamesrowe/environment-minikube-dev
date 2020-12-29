@@ -34,9 +34,9 @@ dependencies:
   name: kubernetes-replicator
   repository: https://helm.mittwald.de
   version: 2.3.0
-- name: jx-pipelines-visualizer
-  repository: https://storage.googleapis.com/jenkinsxio/charts/
-  version: 0.0.30
+- name: octant
+  repository: https://chartmuseum-jx.simonjamesrowe.com/
+  version: 0.0.4
 - name: elasticsearch
   repository: https://helm.elastic.co
   version: 7.10.0

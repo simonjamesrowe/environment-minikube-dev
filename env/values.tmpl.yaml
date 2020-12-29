@@ -149,3 +149,27 @@ gradle:
           resolutionStrategy.cacheDynamicVersionsFor 0, 'seconds'
        }
     }
+
+octant:
+  plugins:
+    install:
+    - https://github.com/aquasecurity/starboard-octant-plugin/releases/download/v0.6.0/starboard-octant-plugin_linux_x86_64.tar.gz
+    dir:
+      mount:
+        emptyDir: { }
+      mountPath: /home/octant/.config/octant/plugins/
+  ingress:
+    enabled: true
+    annotations:
+      kubernetes.io/ingress.class: nginx
+      nginx.ingress.kubernetes.io/auth-realm: Authentication Required
+      nginx.ingress.kubernetes.io/auth-secret: basic-auth
+      nginx.ingress.kubernetes.io/auth-type: basic
+    hosts:
+      - host: octant.simonjamesrowe.com
+        paths:
+          - /
+    tls:
+      - hosts:
+          - octant.simonjamesrowe.com
+        secretName: tls-simonjamesrowe-com-p
