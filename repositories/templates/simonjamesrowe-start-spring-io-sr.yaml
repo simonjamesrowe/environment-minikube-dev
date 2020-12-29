@@ -1,0 +1,21 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: simonjamesrowe
+    provider: github
+    repository: start.spring.io
+  name: simonjamesrowe-start-spring-io
+spec:
+  description: Imported application for simonjamesrowe/start.spring.io
+  httpCloneURL: https://github.com/simonjamesrowe/start.spring.io.git
+  org: simonjamesrowe
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: start.spring.io
+  scheduler:
+    kind: ""
+    name: ""
+  url: https://github.com/simonjamesrowe/start.spring.io.git

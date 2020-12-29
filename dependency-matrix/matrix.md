@@ -3,3 +3,7 @@
 Dependency | Sources | Version | Mismatched versions
 ---------- | ------- | ------- | -------------------
 [simonjamesrowe/api-gateway](https://github.com/simonjamesrowe/api-gateway.git) |  | []() | 
+[simonjamesrowe/react-ui](https://github.com/simonjamesrowe/react-ui.git) |  | []() | 
+[simonjamesrowe/strapi-cms](https://github.com/simonjamesrowe/strapi-cms.git) |  | []() | 
+[simonjamesrowe/component-test](https://github.com/simonjamesrowe/component-test.git) |  | []() | 
+[simonjamesrowe/start.spring.io](https://github.com/simonjamesrowe/start.spring.io.git) |  | []() | 
