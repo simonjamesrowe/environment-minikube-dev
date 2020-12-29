@@ -1,0 +1,21 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: simonjamesrowe
+    provider: github
+    repository: octant
+  name: simonjamesrowe-octant
+spec:
+  description: Imported application for simonjamesrowe/octant
+  httpCloneURL: https://github.com/simonjamesrowe/octant.git
+  org: simonjamesrowe
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: octant
+  scheduler:
+    kind: ""
+    name: ""
+  url: https://github.com/simonjamesrowe/octant.git
