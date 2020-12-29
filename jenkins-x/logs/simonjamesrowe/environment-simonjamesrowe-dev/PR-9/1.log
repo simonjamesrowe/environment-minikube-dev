@@ -1,0 +1,59 @@
+
+Showing logs for build [32msimonjamesrowe-environment-simo-pfpkl-1[0m stage [32mpr-checks[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1609238440.9471488,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32msimonjamesrowe-environment-simo-pfpkl-1[0m stage [32mpr-checks[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32msimonjamesrowe-environment-simo-pfpkl-1[0m stage [32mpr-checks[0m and container [32mplace-tools[0m
+
+Showing logs for build [32msimonjamesrowe-environment-simo-pfpkl-1[0m stage [32mpr-checks[0m and container [32mstep-git-source-simonjamesrowe-environment-simo-pfpkl-g7xs2[0m
+{"level":"info","ts":1609238447.028551,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/simonjamesrowe/environment-simonjamesrowe-dev.git @ master in path /workspace/source"}
+{"level":"warn","ts":1609238447.0286448,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /****/.ssh: file exists"}
+{"level":"info","ts":1609238447.0849557,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32msimonjamesrowe-environment-simo-pfpkl-1[0m stage [32mpr-checks[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32msimonjamesrowe-environment-simo-pfpkl-1[0m stage [32mpr-checks[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:cf7bb74097b59be805ecc544ea765bc835c5c7b3,9:1f4b263dae5cf5150a381eea15db9419ecf9ee1e
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow 1f4b263dae5cf5150a381eea15db9419ecf9ee1e: cf7bb74097b59be805ecc544ea765bc835c5c7b3:
+DEBUG: ran git fetch --unshallow origin 1f4b263dae5cf5150a381eea15db9419ecf9ee1e: cf7bb74097b59be805ecc544ea765bc835c5c7b3: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard cf7bb74097b59be805ecc544ea765bc835c5c7b3
+DEBUG: ran git reset --hard cf7bb74097b59be805ecc544ea765bc835c5c7b3 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge 1f4b263dae5cf5150a381eea15db9419ecf9ee1e
+DEBUG: ran git merge 1f4b263dae5cf5150a381eea15db9419ecf9ee1e in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e cf7bb74097b59be805ecc544ea765bc835c5c7b3..HEAD
+Merged SHA 1f4b263dae5cf5150a381eea15db9419ecf9ee1e with commit message 'chore(deps): bump https://github.com/simonjamesrowe/start.spring.io.git' into base branch master
+
+Showing logs for build [32msimonjamesrowe-environment-simo-pfpkl-1[0m stage [32mpr-checks[0m and container [32mstep-verify-parameters[0m
+error: resolve the secrets URIs: replacing secrets URIs: replacing vault paths in *****User:
+  htpasswd: local:simonjamesrowe/*****User:htpasswd
+  password: local:simonjamesrowe/*****User:password
+  username: *****
+aws:
+  accessKeyId: local:simonjamesrowe/aws:accessKeyId
+  accessSecret: local:simonjamesrowe/aws:accessSecret
+  hostedZoneId: local:simonjamesrowe/aws:hostedZoneId
+docker:
+  email: simon@simonjamesrowe.com
+  password: local:simonjamesrowe/docker:password
+  url: harbor.simonjamesrowe.com
+  username: *****
+enableDocker: true
+mongo:
+  ****Password: local:simonjamesrowe/mongo:****Password
+pipelineUser:
+  email: simon@simonjamesrowe.com
+  token: local:simonjamesrowe/pipelineUser:token
+  username: *************
+prow:
+  hmacToken: local:simonjamesrowe/prow:hmacToken
+strapi:
+  jwtSigningKey: local:simonjamesrowe/strapi:jwtSigningKey
+: unable to find "htpasswd" in secret at "simonjamesrowe/*****User"
+[31m
+Pipeline failed on stage 'pr-checks' : container 'step-verify-parameters'. The execution of the pipeline has stopped.[0m
