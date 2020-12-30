@@ -36,7 +36,7 @@ dependencies:
   version: 2.3.0
 - name: octant
   repository: https://chartmuseum-jx.simonjamesrowe.com/
-  version: 0.0.8
+  version: 0.0.12
 - name: elasticsearch
   repository: https://helm.elastic.co
   version: 7.10.0
