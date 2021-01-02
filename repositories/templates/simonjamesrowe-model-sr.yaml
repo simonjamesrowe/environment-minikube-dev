@@ -1,0 +1,21 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: simonjamesrowe
+    provider: github
+    repository: model
+  name: simonjamesrowe-model
+spec:
+  description: Imported application for simonjamesrowe/model
+  httpCloneURL: https://github.com/simonjamesrowe/model.git
+  org: simonjamesrowe
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: model
+  scheduler:
+    kind: ""
+    name: ""
+  url: https://github.com/simonjamesrowe/model.git
