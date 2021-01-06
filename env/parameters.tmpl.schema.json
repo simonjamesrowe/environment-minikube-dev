@@ -151,6 +151,23 @@
         }
       }
     },
+    "apiGateway": {
+      "type": "object",
+      "required" : ["username", "password"],
+      "properties": {
+        "username": {
+          "type": "string",
+          "title": "Username for api gateway",
+          "description": "Username for api gateway"
+        },
+        "password": {
+          "type": "string",
+          "format": "password",
+          "title": "Password for Api Gateway",
+          "description": "Password for Api Gateway"
+        }
+      }
+    },
     "enableDocker": {
       "type": "boolean",
       "title": "Do you want to configure non default Docker Registry?",

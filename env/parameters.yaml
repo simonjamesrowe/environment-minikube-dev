@@ -2,6 +2,9 @@ adminUser:
   htpasswd: local:simonjamesrowe/adminUser:htpasswd
   password: local:simonjamesrowe/adminUser:password
   username: admin
+apiGateway:
+  password: local:simonjamesrowe/apiGateway:password
+  username: webhook
 aws:
   accessKeyId: local:simonjamesrowe/aws:accessKeyId
   accessSecret: local:simonjamesrowe/aws:accessSecret

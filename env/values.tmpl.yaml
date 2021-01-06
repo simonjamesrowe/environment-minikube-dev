@@ -23,6 +23,10 @@ cms:
 
 htpasswd: {{ .Parameters.adminUser.htpasswd}}
 
+apiGateway:
+  username: {{ .Parameters.apiGateway.username }}
+  password: {{ .Parameters.apiGateway.password }}
+
 elasticsearch:
   esJavaOpts: -Xmx256m -Xms256m
   replicas: 1
