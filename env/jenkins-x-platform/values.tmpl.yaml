@@ -206,7 +206,7 @@ jenkins:
           GIT_COMMITTER_NAME: jenkins-x-bot
           XDG_CONFIG_HOME: /home/jenkins
           DOCKER_CONFIG: /home/jenkins/.docker/
-
+          TESTCONTAINERS_HOST_OVERRIDE: 192.168.4.23
           # lets disable the noisy download artifact logging messages
           MAVEN_OPTS: -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
         ServiceAccount: jenkins
@@ -262,7 +262,7 @@ jenkins:
           GIT_COMMITTER_NAME: jenkins-x-bot
           XDG_CONFIG_HOME: /home/jenkins
           DOCKER_CONFIG: /home/jenkins/.docker/
-
+          TESTCONTAINERS_HOST_OVERRIDE: 192.168.4.23
           # lets disable the noisy download artifact logging messages
           MAVEN_OPTS: -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
         ServiceAccount: jenkins
