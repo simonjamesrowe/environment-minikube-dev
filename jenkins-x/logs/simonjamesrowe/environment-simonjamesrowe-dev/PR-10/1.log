@@ -1,0 +1,62 @@
+
+Showing logs for build [32msimonjamesrowe-environment-simo-7m9bv-1[0m stage [32mpr-checks[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1610233611.5165565,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32msimonjamesrowe-environment-simo-7m9bv-1[0m stage [32mpr-checks[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32msimonjamesrowe-environment-simo-7m9bv-1[0m stage [32mpr-checks[0m and container [32mplace-tools[0m
+
+Showing logs for build [32msimonjamesrowe-environment-simo-7m9bv-1[0m stage [32mpr-checks[0m and container [32mstep-git-source-simonjamesrowe-environment-simo-7m9bv-wcr29[0m
+{"level":"info","ts":1610233619.147426,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/simonjamesrowe/environment-simonjamesrowe-dev.git @ master in path /workspace/source"}
+{"level":"warn","ts":1610233619.1475878,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /****/.ssh: file exists"}
+{"level":"info","ts":1610233619.1963446,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32msimonjamesrowe-environment-simo-7m9bv-1[0m stage [32mpr-checks[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32msimonjamesrowe-environment-simo-7m9bv-1[0m stage [32mpr-checks[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:67760608b67ef065c8802368eb501628ccbcdf0a,10:ac354e64aacf6840b0eea886e57f45dc72520908
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow ac354e64aacf6840b0eea886e57f45dc72520908: 67760608b67ef065c8802368eb501628ccbcdf0a:
+DEBUG: ran git fetch --unshallow origin ac354e64aacf6840b0eea886e57f45dc72520908: 67760608b67ef065c8802368eb501628ccbcdf0a: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard 67760608b67ef065c8802368eb501628ccbcdf0a
+DEBUG: ran git reset --hard 67760608b67ef065c8802368eb501628ccbcdf0a in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge ac354e64aacf6840b0eea886e57f45dc72520908
+DEBUG: ran git merge ac354e64aacf6840b0eea886e57f45dc72520908 in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 67760608b67ef065c8802368eb501628ccbcdf0a..HEAD
+Merged SHA ac354e64aacf6840b0eea886e57f45dc72520908 with commit message 'chore(deps): bump https://github.com/simonjamesrowe/search-service.git' into base branch master
+
+Showing logs for build [32msimonjamesrowe-environment-simo-7m9bv-1[0m stage [32mpr-checks[0m and container [32mstep-verify-parameters[0m
+error: resolve the secrets URIs: replacing secrets URIs: replacing vault paths in *****User:
+  htpasswd: local:simonjamesrowe/*****User:htpasswd
+  password: local:simonjamesrowe/*****User:password
+  username: *****
+apiGateway:
+  password: local:simonjamesrowe/apiGateway:password
+  username: *******
+aws:
+  accessKeyId: local:simonjamesrowe/aws:accessKeyId
+  accessSecret: local:simonjamesrowe/aws:accessSecret
+  hostedZoneId: local:simonjamesrowe/aws:hostedZoneId
+docker:
+  email: simon@simonjamesrowe.com
+  password: local:simonjamesrowe/docker:password
+  url: harbor.simonjamesrowe.com
+  username: *****
+enableDocker: true
+mongo:
+  ****Password: local:simonjamesrowe/mongo:****Password
+pipelineUser:
+  email: simon@simonjamesrowe.com
+  token: local:simonjamesrowe/pipelineUser:token
+  username: *************
+prow:
+  hmacToken: local:simonjamesrowe/prow:hmacToken
+strapi:
+  jwtSigningKey: local:simonjamesrowe/strapi:jwtSigningKey
+: unable to find "htpasswd" in secret at "simonjamesrowe/*****User"
+[31m
+Pipeline failed on stage 'pr-checks' : container 'step-verify-parameters'. The execution of the pipeline has stopped.[0m
