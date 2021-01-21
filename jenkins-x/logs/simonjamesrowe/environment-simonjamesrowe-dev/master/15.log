@@ -1,26 +1,26 @@
 
-Showing logs for build [32msimonjamesrowe-environment-simo-69smk-15[0m stage [32mrelease[0m and container [32mcredential-initializer[0m
-{"level":"info","ts":1608481446.1387174,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+Showing logs for build [32msimonjamesrowe-environment-simo-csb2k-15[0m stage [32mrelease[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1611236133.6120324,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
 
-Showing logs for build [32msimonjamesrowe-environment-simo-69smk-15[0m stage [32mrelease[0m and container [32mworking-dir-initializer[0m
+Showing logs for build [32msimonjamesrowe-environment-simo-csb2k-15[0m stage [32mrelease[0m and container [32mworking-dir-initializer[0m
 
-Showing logs for build [32msimonjamesrowe-environment-simo-69smk-15[0m stage [32mrelease[0m and container [32mplace-tools[0m
+Showing logs for build [32msimonjamesrowe-environment-simo-csb2k-15[0m stage [32mrelease[0m and container [32mplace-tools[0m
 
-Showing logs for build [32msimonjamesrowe-environment-simo-69smk-15[0m stage [32mrelease[0m and container [32mstep-git-source-simonjamesrowe-environment-simo-69smk-lct7k[0m
-{"level":"info","ts":1608481458.166682,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/simonjamesrowe/environment-simonjamesrowe-dev.git @ v1.0.123 in path /workspace/source"}
-{"level":"warn","ts":1608481458.1667724,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /****/.ssh: file exists"}
-{"level":"info","ts":1608481458.2178004,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+Showing logs for build [32msimonjamesrowe-environment-simo-csb2k-15[0m stage [32mrelease[0m and container [32mstep-git-source-simonjamesrowe-environment-simo-csb2k-52wgt[0m
+{"level":"info","ts":1611236146.0297043,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/simonjamesrowe/environment-simonjamesrowe-dev.git @ v1.0.160 in path /workspace/source"}
+{"level":"warn","ts":1611236146.0298193,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /****/.ssh: file exists"}
+{"level":"info","ts":1611236146.0869102,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
 
-Showing logs for build [32msimonjamesrowe-environment-simo-69smk-15[0m stage [32mrelease[0m and container [32mstep-setup-builder-home[0m
+Showing logs for build [32msimonjamesrowe-environment-simo-csb2k-15[0m stage [32mrelease[0m and container [32mstep-setup-builder-home[0m
 
-Showing logs for build [32msimonjamesrowe-environment-simo-69smk-15[0m stage [32mrelease[0m and container [32mstep-git-merge[0m
-Using SHAs from PULL_REFS=master:5c64f3abb893d4baa2c495e7978316a379e9d712
+Showing logs for build [32msimonjamesrowe-environment-simo-csb2k-15[0m stage [32mrelease[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:fe253c42a21ad49cc244b0733893c11d3788edf5
 WARNING: no SHAs to merge, falling back to initial cloned commit
 
-Showing logs for build [32msimonjamesrowe-environment-simo-69smk-15[0m stage [32mrelease[0m and container [32mstep-validate-git[0m
+Showing logs for build [32msimonjamesrowe-environment-simo-csb2k-15[0m stage [32mrelease[0m and container [32mstep-validate-git[0m
 Git configured for user: jenkins-x-bot and email jenkins-x@googlegroups.com
 
-Showing logs for build [32msimonjamesrowe-environment-simo-69smk-15[0m stage [32mrelease[0m and container [32mstep-verify-preinstall[0m
+Showing logs for build [32msimonjamesrowe-environment-simo-csb2k-15[0m stage [32mrelease[0m and container [32mstep-verify-preinstall[0m
 ** boot has only been validated on GKE and EKS, we'd love feedback and contributions for other Kubernetes providers
 Running in Batch Mode, execution will continue
 writing the following to the OWNERS file for the development environment repository:
@@ -38,16 +38,16 @@ Installing kubectl
 Downloading https://storage.googleapis.com/kubernetes-release/release/v1.16.5/bin/linux/amd64/kubectl to /tekton/home/.**/bin/kubectl...
 Downloaded /tekton/home/.**/bin/kubectl
 Installing helm
-Downloading https://get.helm.sh/helm-v2.16.9-linux-amd64.tar.gz to /tekton/home/.**/bin/helm.tgz...
+Downloading https://get.helm.sh/helm-v2.17.0-linux-amd64.tar.gz to /tekton/home/.**/bin/helm.tgz...
 Downloaded /tekton/home/.**/bin/helm.tgz
 Installing helm secrets plugin
-Verifying the CLI packages using version stream URL: https://github.com/jenkins-x/jenkins-x-versions.git and git ref: v1.0.608
-using version 2.1.150 of **
+Verifying the CLI packages using version stream URL: https://github.com/jenkins-x/jenkins-x-versions.git and git ref: v1.0.609
+WARNING: ** version specified in the version stream /tekton/home/.**/jenkins-x-versions is 2.1.150. You are using 2.1.155. We highly recommend you upgrade versionstream ref
 CLI packages kubectl, git, helm seem to be setup correctly
 NAME                          VERSION
 Kubernetes cluster            v1.15.11
 kubectl (installed in JX_BIN) v1.16.6-beta.0
-helm client                   2.16.9
+helm client                   2.17.0
 git                           2.21.1
 
 Verifying Storage...
@@ -60,33 +60,31 @@ verified there is a ConfigMap plugins in namespace **
 Cluster looks good, you are ready to '** boot' now!
 
 
-Showing logs for build [32msimonjamesrowe-environment-simo-69smk-15[0m stage [32mrelease[0m and container [32mstep-install-jx-crds[0m
+Showing logs for build [32msimonjamesrowe-environment-simo-csb2k-15[0m stage [32mrelease[0m and container [32mstep-install-jx-crds[0m
 Jenkins X CRDs upgraded with success
 
-Showing logs for build [32msimonjamesrowe-environment-simo-69smk-15[0m stage [32mrelease[0m and container [32mstep-install-velero[0m
+Showing logs for build [32msimonjamesrowe-environment-simo-csb2k-15[0m stage [32mrelease[0m and container [32mstep-install-velero[0m
 Modified file /workspace/source/systems/velero/Chart.yaml to set the chart to version 15
 creating the lock configmap **-lock-velero
 lock configmap **-lock-velero created
-Adding missing Helm repo: charts.helm.sh https://charts.helm.sh/stable
-Successfully added Helm repository charts.helm.sh.
 cleaning the lock configmap **-lock-velero
 
-Showing logs for build [32msimonjamesrowe-environment-simo-69smk-15[0m stage [32mrelease[0m and container [32mstep-install-velero-backups[0m
+Showing logs for build [32msimonjamesrowe-environment-simo-csb2k-15[0m stage [32mrelease[0m and container [32mstep-install-velero-backups[0m
 Modified file /workspace/source/systems/velero-backups/Chart.yaml to set the chart to version 15
 creating the lock configmap **-lock-velero
 lock configmap **-lock-velero created
 Ignoring templates/default-backup.yaml
-No requirements file: /tmp/**-helm-apply-197821774/velero-backups/requirements.yaml so not checking for missing versions
+No requirements file: /tmp/**-helm-apply-895230703/velero-backups/requirements.yaml so not checking for missing versions
 cleaning the lock configmap **-lock-velero
 
-Showing logs for build [32msimonjamesrowe-environment-simo-69smk-15[0m stage [32mrelease[0m and container [32mstep-install-nginx-controller[0m
+Showing logs for build [32msimonjamesrowe-environment-simo-csb2k-15[0m stage [32mrelease[0m and container [32mstep-install-nginx-controller[0m
 Modified file /workspace/source/systems/**ing/Chart.yaml to set the chart to version 15
 creating the lock configmap **-lock-kube-system
 lock configmap **-lock-kube-system created
 
 cleaning the lock configmap **-lock-kube-system
 
-Showing logs for build [32msimonjamesrowe-environment-simo-69smk-15[0m stage [32mrelease[0m and container [32mstep-create-helm-values[0m
+Showing logs for build [32msimonjamesrowe-environment-simo-csb2k-15[0m stage [32mrelease[0m and container [32mstep-create-helm-values[0m
 defaulting to secret storage scheme local found from requirements file at /workspace/source/**-requirements.yml
 defaulting to secret base path to the cluster name simonjamesrowe found from requirements file at /workspace/source/**-requirements.yml
 generated schema file /workspace/source/env/parameters.schema.json from template /workspace/source/env/parameters.tmpl.schema.json
