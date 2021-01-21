@@ -174,3 +174,10 @@ octant:
       - hosts:
           - octant.simonjamesrowe.com
         secretName: tls-simonjamesrowe-com-p
+
+postgres:
+  postgresqlUsername: postgres
+  existingSecret: postgres-application-secrets
+  postgresqlDatabase: jx
+  persistence:
+    size: 10Gi

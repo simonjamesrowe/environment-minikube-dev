@@ -46,4 +46,6 @@ dependencies:
 - name: cp-helm-charts
   repository: https://confluentinc.github.io/cp-helm-charts/
   version: 0.6.0
-
+- name: postgresql
+  repository: https://charts.bitnami.com/bitnami
+  version: 9.8.12
