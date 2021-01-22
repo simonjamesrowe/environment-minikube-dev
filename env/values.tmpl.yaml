@@ -189,7 +189,6 @@ postgresql:
 pact-broker:
   service:
     annotations:
-      annotations:
-        fabric8.io/expose: "true"
-        fabric8.io/ingress.annotations: "kubernetes.io/ingress.class: nginx"
-        fabric8.io/host.name: pact-broeker.simonjamesrowe.com
+      fabric8.io/expose: "true"
+      fabric8.io/ingress.annotations: "kubernetes.io/ingress.class: nginx"
+      fabric8.io/host.name: pact-broeker.simonjamesrowe.com
