@@ -179,8 +179,8 @@ octant:
           - octant.simonjamesrowe.com
         secretName: tls-simonjamesrowe-com-p
 
-postgres:
-  postgresqlUsername: postgres
+postgresql:
+  postgresqlUsername: postgresql
   existingSecret: postgres-application-secrets
   postgresqlDatabase: jx
   persistence:
