@@ -49,3 +49,6 @@ dependencies:
 - name: postgresql
   repository: https://charts.bitnami.com/bitnami
   version: 9.8.12
+- name: pact-broker
+  repository: https://chartmuseum-jx.simonjamesrowe.com/
+  version: 0.0.1

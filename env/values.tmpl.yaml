@@ -27,6 +27,10 @@ apiGateway:
   username: {{ .Parameters.apiGateway.username }}
   password: {{ .Parameters.apiGateway.password }}
 
+pactBroker:
+  username: {{ .Parameters.pactBroker.username }}
+  password: {{ .Parameters.pactBroker.password }}
+
 elasticsearch:
   esJavaOpts: -Xmx256m -Xms256m
   replicas: 1
