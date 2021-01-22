@@ -17,6 +17,9 @@ docker:
 enableDocker: true
 mongo:
   rootPassword: local:simonjamesrowe/mongo:rootPassword
+pactBroker:
+  password: local:simonjamesrowe/pactBroker:password
+  username: pact
 pipelineUser:
   email: simon@simonjamesrowe.com
   token: local:simonjamesrowe/pipelineUser:token
