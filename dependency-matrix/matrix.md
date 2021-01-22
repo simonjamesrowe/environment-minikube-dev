@@ -6,4 +6,4 @@ Dependency | Sources | Version | Mismatched versions
 [simonjamesrowe/react-ui](https://github.com/simonjamesrowe/react-ui.git) |  | []() | 
 [simonjamesrowe/strapi-cms](https://github.com/simonjamesrowe/strapi-cms.git) |  | []() | 
 [simonjamesrowe/component-test](https://github.com/simonjamesrowe/component-test.git) |  | []() | 
-[simonjamesrowe/search-service](https://github.com/simonjamesrowe/search-service.git) |  | []() | 
+[simonjamesrowe/pact-broker](https://github.com/simonjamesrowe/pact-broker.git) |  | []() | 
