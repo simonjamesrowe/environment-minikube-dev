@@ -26,5 +26,7 @@ pipelineUser:
   username: simonrowe-bot
 prow:
   hmacToken: local:simonjamesrowe/prow:hmacToken
+sendGrid:
+  apiKey: local:simonjamesrowe/sendGrid:apiKey
 strapi:
   jwtSigningKey: local:simonjamesrowe/strapi:jwtSigningKey
