@@ -168,6 +168,18 @@
         }
       }
     },
+     "sendGrid": {
+      "type": "object",
+      "required" : ["apiKey"],
+      "properties": {
+        "apiKey": {
+          "type": "string",
+          "format": "password",
+          "title": "Api Key for SendGrid",
+          "description": "Api Key for Sendgrid"
+        }
+      }
+    },
     "pactBroker": {
       "type": "object",
       "required" : ["username", "password"],

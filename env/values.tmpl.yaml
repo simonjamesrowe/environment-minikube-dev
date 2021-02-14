@@ -18,6 +18,9 @@ mongo:
   port: "27017"
   hostname: jenkins-x-mongodb.jx
 
+sendGrid:
+  apiKey: {{ .Parameters.sendGrid.apiKey }}
+
 cms:
   jwtSigningKey: {{ .Parameters.strapi.jwtSigningKey}}
 
@@ -187,8 +190,13 @@ postgresql:
     size: 10Gi
 
 pact-broker:
-  service:
-    annotations:
-      fabric8.io/expose: "true"
-      fabric8.io/ingress.annotations: "kubernetes.io/ingress.class: nginx"
-      fabric8.io/host.name: pact-brocker.simonjamesrowe.com
+  jxRequirements:
+    ingress:
+      domain: "simonjamesrowe.com"
+      externalDNS: false
+      namespaceSubDomain: "."
+      tls:
+        enabled: true
+        production: true
+      annotations:
+        kubernetes.io/ingress.class: nginx

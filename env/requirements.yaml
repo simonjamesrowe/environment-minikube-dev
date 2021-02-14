@@ -51,4 +51,4 @@ dependencies:
   version: 9.8.12
 - name: pact-broker
   repository: https://chartmuseum-jx.simonjamesrowe.com/
-  version: 0.0.4
+  version: 0.0.6
