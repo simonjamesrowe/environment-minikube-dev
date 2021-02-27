@@ -35,20 +35,20 @@ pactBroker:
   password: {{ .Parameters.pactBroker.password }}
 
 elasticsearch:
-  esJavaOpts: -Xmx256m -Xms256m
+  esJavaOpts: -Xmx1g -Xms1g
   replicas: 1
   volumeClaimTemplate:
     accessModes: [ "ReadWriteOnce" ]
     resources:
       requests:
-        storage: 5Gi
+        storage: 25Gi
   resources:
     requests:
-      cpu: 500m
-      memory: 512M
+      cpu: 1
+      memory: 1Gi
     limits:
-      cpu: 500m
-      memory: 512M
+      cpu: 1
+      memory: 1Gi
 kibana:
   resources:
     requests:
