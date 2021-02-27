@@ -8,6 +8,7 @@ metadata:
     k8s-app: filebeat
 data:
   filebeat.yml: |-
+    setup.kibana.host: http://jenkins-x-kibana.jx:5601
     setup.dashboards.enabled: true
     filebeat.inputs:
     - type: container
