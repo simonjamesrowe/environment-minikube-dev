@@ -52,3 +52,7 @@ dependencies:
 - name: pact-broker
   repository: https://chartmuseum-jx.simonjamesrowe.com/
   version: 0.0.6
+- name: keycloak
+  repository: https://codecentric.github.io/helm-charts
+  version: 9.9.2
+

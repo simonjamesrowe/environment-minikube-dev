@@ -183,6 +183,7 @@ octant:
         secretName: tls-simonjamesrowe-com-p
 
 postgresql:
+  enabled: false
   postgresqlUsername: postgresql
   existingSecret: postgres-application-secrets
   postgresqlDatabase: jx
@@ -200,3 +201,38 @@ pact-broker:
         production: true
       annotations:
         kubernetes.io/ingress.class: nginx
+
+keycloak:
+  postgresql:
+    enabled: false
+  ingress:
+    rules:
+      - host: auth.simonjamesrowe.com
+    tls:
+      - hosts:
+          - auth.simonjamesrowe.com
+        secretName: tls-simonjamesrowe-com-p
+
+  extraEnv: |
+    - name: DB_VENDOR
+      value: postgres
+    - name: DB_ADDR
+      value: jenkins-x-postgresql
+    - name: DB_PORT
+      value: "5432"
+    - name: DB_DATABASE
+      value: jx
+    - name: PROXY_ADDRESS_FORWARDING
+      value: "true"
+
+  extraEnvFrom: |
+    - secretRef:
+        name: '{{ include "keycloak.fullname" . }}-db'
+
+  secrets:
+    db:
+      stringData:
+        DB_USER: 'postgresql'
+        DB_PASSWORD: '{{ .Parameters.mongo.rootPassword }}'
+        KEYCLOAK_USER: 'admin'
+        KEYCLOAK_PASSWORD: '{{ .Parameters.mongo.rootPassword }}'
