@@ -206,8 +206,11 @@ keycloak:
   postgresql:
     enabled: false
   ingress:
+    enabled: true
     rules:
       - host: auth.simonjamesrowe.com
+        paths:
+          - /
     tls:
       - hosts:
           - auth.simonjamesrowe.com
@@ -227,7 +230,7 @@ keycloak:
 
   extraEnvFrom: |
     - secretRef:
-        name: '{{ include "keycloak.fullname" . }}-db'
+        name: 'jenkins-x-keycloak-db'
 
   secrets:
     db:
