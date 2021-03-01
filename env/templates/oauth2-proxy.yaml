@@ -1,0 +1,90 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    k8s-app: oauth2-proxy
+  name: oauth2-proxy
+  namespace: jx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      k8s-app: oauth2-proxy
+  template:
+    metadata:
+      labels:
+        k8s-app: oauth2-proxy
+    spec:
+      containers:
+        - args:
+            - --provider=keycloak
+            - --client-id=simonjamesrowe
+            - --client-secret=7a5461e2-3176-4a42-a8ea-cda530f18923
+            - --login-url=https://auth.simonjamesrowe.com/auth/realms/master/protocol/openid-connect/auth
+            - --redeem-url=https://auth.simonjamesrowe.com/auth/realms/master/protocol/openid-connect/token
+            - --profile-url=https://auth.simonjamesrowe.com/auth/realms/master/protocol/openid-connect/userinfo
+            - --validate-url=https://auth.simonjamesrowe.com/auth/realms/master/protocol/openid-connect/userinfo
+            - --http-address=0.0.0.0:4180
+            - --email-domain=*
+            - --scope=email
+          env:
+            # docker run -ti --rm python:3-alpine python -c 'import secrets,base64; print(base64.b64encode(base64.b64encode(secrets.token_bytes(16))));'
+            - name: OAUTH2_PROXY_COOKIE_SECRET
+              value: "bmJWcnVsaVZJWnJhdjcwZUE2TS9aZz09"
+          image: quay.io/oauth2-proxy/oauth2-proxy:latest
+          imagePullPolicy: Always
+          name: oauth2-proxy
+          ports:
+            - containerPort: 4180
+              protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    k8s-app: oauth2-proxy
+  name: oauth2-proxy
+  namespace: jx
+spec:
+  ports:
+    - name: http
+      port: 4180
+      protocol: TCP
+      targetPort: 4180
+  selector:
+    k8s-app: oauth2-proxy
+---
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: oauth2-proxy
+  namespace: jx
+spec:
+  rules:
+    - host: kibana.simonjamesrowe.com
+      http:
+        paths:
+          - backend:
+              serviceName: oauth2-proxy
+              servicePort: 4180
+            path: /oauth2
+    - host: octant.simonjamesrowe.com
+      http:
+        paths:
+          - backend:
+              serviceName: oauth2-proxy
+              servicePort: 4180
+            path: /oauth2
+    - host: kafka-magic.simonjamesrowe.com
+      http:
+        paths:
+          - backend:
+              serviceName: oauth2-proxy
+              servicePort: 4180
+            path: /oauth2
+  tls:
+    - hosts:
+        - kibana.simonjamesrowe.com
+        - octant.simonjamesrowe.com
+        - kafka-magic.simonjamesrowe.com
+      secretName: tls-simonjamesrowe-com-p
