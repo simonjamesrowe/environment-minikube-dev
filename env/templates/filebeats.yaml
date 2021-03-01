@@ -13,11 +13,34 @@ data:
     filebeat.inputs:
     - type: container
       paths:
-        - /var/log/containers/jx*.log
-        - /var/log/containers/jenkins*.log
+        - /var/log/containers/jx-strapi*.log
+        - /var/log/containers/jx-react*.log
+        - /var/log/containers/jenkins-x-harbor*.log
+        - /var/log/containers/jenkins-x-keycloak*.log
+        - /var/log/containers/jenkins-x-mongodb*.log
+        - /var/log/containers/jenkins-x-nexus*.log
+        - /var/log/containers/jenkins-x-octant*.log
+        - /var/log/containers/jenkins-x-pact*.log
+        - /var/log/containers/jenkins-x-postgres*.log
         - /var/log/containers/elastic*.log
         - /var/log/containers/kafka*.log
+      exclude_lines: ['DEBUG', 'debug', 'TRACE', 'trace', 'kube-probe', '\/api\/ping']
+      processors:
+        - add_kubernetes_metadata:
+            host: ${NODE_NAME}
+            matchers:
+            - logs_path:
+                logs_path: "/var/log/containers/"
+    - type: container
+      paths:
+        - /var/log/containers/jx-api-gateway*.log
+        - /var/log/containers/jx-search*.log
+        - /var/log/containers/jx-start*.log
+        - /var/log/containers/jenkins-x-kibana*.log
       exclude_lines: ['DEBUG', 'debug', 'TRACE', 'trace']
+      json:
+        keys_under_root: true
+        message_key: message
       processors:
         - add_kubernetes_metadata:
             host: ${NODE_NAME}
