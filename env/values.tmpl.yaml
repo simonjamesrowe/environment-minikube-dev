@@ -240,7 +240,17 @@ keycloak:
 
 apm-server:
   image: docker.elastic.co/apm/apm-server-oss
-
+  ingress:
+    enabled: true
+    annotations:
+      kubernetes.io/ingress.class: nginx
+    path: /
+    hosts:
+      - apm.simonjamesrowe.com
+    tls:
+      - secretName: tls-simonjamesrowe-com-p
+        hosts:
+          - apm.simonjamesrowe.com
   apmConfig:
     apm-server.yml: |
       apm-server:
