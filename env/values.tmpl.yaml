@@ -255,6 +255,22 @@ apm-server:
     apm-server.yml: |
       apm-server:
         host: "0.0.0.0:8200"
+        rum:
+          enabled: true
+          event_rate:
+            limit: 300
+            lru_size: 1000
+          allow_origins:
+            - '*'
+          allow_headers:
+            - '*'
+          library_pattern: "node_modules|bower_components|~"
+          exclude_from_grouping: "^/webpack"
+          source_mapping:
+            enabled: true
+            cache:
+              expiration: 5m
+            index_pattern: "apm-*-sourcemap*"
       queue: {}
       output.file:
         enabled: false
