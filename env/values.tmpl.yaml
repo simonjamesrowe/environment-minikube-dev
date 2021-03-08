@@ -189,16 +189,15 @@ postgresql:
     size: 10Gi
 
 pact-broker:
-  jxRequirements:
-    ingress:
-      domain: "simonjamesrowe.com"
-      externalDNS: false
-      namespaceSubDomain: "."
-      tls:
-        enabled: true
-        production: true
-      annotations:
-        kubernetes.io/ingress.class: nginx
+  ingress:
+    domain: "simonjamesrowe.com"
+    externalDNS: false
+    namespaceSubDomain: "."
+    tls:
+      enabled: true
+      production: true
+    annotations:
+      kubernetes.io/ingress.class: nginx
 
 keycloak:
   postgresql:
@@ -279,3 +278,25 @@ apm-server:
         index: "apm-oss-%{[observer.version]}-%{+yyyy.MM.dd}"
       setup.template.name: "apm-server"
       setup.template.pattern: "apm-oss-*"
+
+sonarqube:
+  ingress:
+    enabled: true
+    annotations:
+      kubernetes.io/ingress.class: nginx
+    hosts:
+      - name: sonarqube.simonjamesrowe.com
+        path: /
+    tls:
+      - secretName: tls-simonjamesrowe-com-p
+        hosts:
+          - sonarqube.simonjamesrowe.com
+  postgresql:
+    enabled: false
+    postgresqlServer: jenkins-x-postgresql
+    postgresqlUsername: postgresql
+    postgresqlPassword: '{{ .Parameters.mongo.rootPassword }}'
+    postgresqlDatabase: jx
+  account:
+    adminPassword: '{{ .Parameters.adminUser.password }}'
+    currentAdminPassword:  '{{ .Parameters.adminUser.password }}'
