@@ -1,0 +1,94 @@
+
+Showing logs for build [32msimonjamesrowe-environment-simo-dcvk4-3[0m stage [32mpr-checks[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1615226217.0558405,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32msimonjamesrowe-environment-simo-dcvk4-3[0m stage [32mpr-checks[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32msimonjamesrowe-environment-simo-dcvk4-3[0m stage [32mpr-checks[0m and container [32mplace-tools[0m
+
+Showing logs for build [32msimonjamesrowe-environment-simo-dcvk4-3[0m stage [32mpr-checks[0m and container [32mstep-git-source-simonjamesrowe-environment-simo-dcvk4-pl9g7[0m
+{"level":"info","ts":1615226224.1019387,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/simonjamesrowe/environment-simonjamesrowe-dev.git @ master in path /workspace/source"}
+{"level":"warn","ts":1615226224.1022375,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /****/.ssh: file exists"}
+{"level":"info","ts":1615226224.1566744,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32msimonjamesrowe-environment-simo-dcvk4-3[0m stage [32mpr-checks[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32msimonjamesrowe-environment-simo-dcvk4-3[0m stage [32mpr-checks[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:b8b2804c9b791be6e513d32cf35e7253cc582ea2,10:789d8cb401f1914304dc2188d2b0c10ef6954706
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git fetch origin --unshallow 789d8cb401f1914304dc2188d2b0c10ef6954706: b8b2804c9b791be6e513d32cf35e7253cc582ea2:
+DEBUG: ran git fetch --unshallow origin 789d8cb401f1914304dc2188d2b0c10ef6954706: b8b2804c9b791be6e513d32cf35e7253cc582ea2: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard b8b2804c9b791be6e513d32cf35e7253cc582ea2
+DEBUG: ran git reset --hard b8b2804c9b791be6e513d32cf35e7253cc582ea2 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge 789d8cb401f1914304dc2188d2b0c10ef6954706
+DEBUG: ran git merge 789d8cb401f1914304dc2188d2b0c10ef6954706 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e b8b2804c9b791be6e513d32cf35e7253cc582ea2..HEAD
+Merged SHA 72c3cd8a4038913ed5630612b7f72767ef4b5971 with commit message 'Merge commit '789d8cb401f1914304dc2188d2b0c10ef6954706'' into base branch master
+Merged SHA 789d8cb401f1914304dc2188d2b0c10ef6954706 with commit message 'chore(deps): bump https://github.com/simonjamesrowe/sonarqube.git' into base branch master
+Merged SHA 89c4c38e9c07da8e2a05cc5929a5ddb5d50e312d with commit message 'chore(config): update configuration' into base branch master
+Merged SHA ff2a482e3f691072eda78ada0646fb9b009c0a23 with commit message 'chore(config): update configuration' into base branch master
+Merged SHA 2b23eb17f516b3bad9ae64d9c964315afc352220 with commit message 'chore(config): update configuration' into base branch master
+Merged SHA 8207fd14392e9846bf04165479fe4e21d63fa002 with commit message 'chore(config): update configuration' into base branch master
+Merged SHA a992a580bb0df2199085da47c7b442abcd97e087 with commit message 'chore(config): update configuration' into base branch master
+Merged SHA df8af222ced9ac5af6eff773c33b30befc94b779 with commit message 'chore(config): update configuration' into base branch master
+Merged SHA 98fda1fae15219ee0de46b6770bae0299fce95e8 with commit message 'chore(config): update configuration' into base branch master
+Merged SHA 4acf474231bace9e2d766f662a936376efab58e3 with commit message 'chore(config): update configuration' into base branch master
+Merged SHA ad5be15c0e020221218720fa5378b25496c9c6dd with commit message 'chore(config): update configuration' into base branch master
+Merged SHA 9c5373046f961210c00d3abe631dc1ea2c49f994 with commit message 'chore(config): update configuration' into base branch master
+Merged SHA d41ce967af64ad53599cfc4166f81823d677a506 with commit message 'chore(config): update configuration' into base branch master
+Merged SHA 963b8dced26f15ec52a56ed857b28605f11a6219 with commit message 'chore(config): update configuration' into base branch master
+Merged SHA 6aa0e75935e1ef2ef616fc066428322e3ff143da with commit message 'chore(config): update configuration' into base branch master
+Merged SHA 7df907896762e4f57bf555599082b8f6a5a7fd75 with commit message 'chore(config): update configuration' into base branch master
+Merged SHA 705d19083c87c47a1babe12d1c493dabb76a4e5c with commit message 'chore(config): update configuration' into base branch master
+Merged SHA 1ea32d80e05f6398d8de0e59f2375b236c0cd8dc with commit message 'chore(config): update configuration' into base branch master
+Merged SHA 12092ab0add4fe8131dbe3bd5f93e228d40c53c1 with commit message 'chore(config): update configuration' into base branch master
+Merged SHA f466e0f3493a6d3b9dac5e81cd8bf20a6017af0d with commit message 'chore(config): update configuration' into base branch master
+Merged SHA 32cc4cd3feb06160fea4056eaedb97e3d212e981 with commit message 'chore(config): update configuration' into base branch master
+Merged SHA 60a1f56e69390313624d990650a7568052903681 with commit message 'chore(config): update configuration' into base branch master
+Merged SHA d07303cd33e4d1443b4417936587db44e127a95d with commit message 'chore(config): update configuration' into base branch master
+Merged SHA f823ef26b22013c35a04b8ba6081d4488ec26822 with commit message 'chore(config): update configuration' into base branch master
+Merged SHA 5171677d7a556a01c7e00a6e5ec1b715d58208c1 with commit message 'chore(deps): bump https://github.com/simonjamesrowe/****-broker.git' into base branch master
+Merged SHA 3d9a94a3bd906ade08379c09ce99e895471a3e2d with commit message 'chore(config): update configuration' into base branch master
+Merged SHA 8cd4a8a9315cb16b79f7bfac19e1898bff970f13 with commit message 'chore(config): update configuration' into base branch master
+Merged SHA ac354e64aacf6840b0eea886e57f45dc72520908 with commit message 'chore(deps): bump https://github.com/simonjamesrowe/search-service.git' into base branch master
+
+Showing logs for build [32msimonjamesrowe-environment-simo-dcvk4-3[0m stage [32mpr-checks[0m and container [32mstep-verify-parameters[0m
+error: resolve the secrets URIs: replacing secrets URIs: replacing vault paths in *****User:
+  htpasswd: local:simonjamesrowe/*****User:htpasswd
+  password: local:simonjamesrowe/*****User:password
+  username: *****
+apiGateway:
+  password: local:simonjamesrowe/apiGateway:password
+  username: *******
+aws:
+  accessKeyId: local:simonjamesrowe/aws:accessKeyId
+  accessSecret: local:simonjamesrowe/aws:accessSecret
+  hostedZoneId: local:simonjamesrowe/aws:hostedZoneId
+docker:
+  email: simon@simonjamesrowe.com
+  password: local:simonjamesrowe/docker:password
+  url: harbor.simonjamesrowe.com
+  username: *****
+enableDocker: true
+mongo:
+  ****Password: local:simonjamesrowe/mongo:****Password
+****Broker:
+  password: local:simonjamesrowe/****Broker:password
+  username: ****
+pipelineUser:
+  email: simon@simonjamesrowe.com
+  token: local:simonjamesrowe/pipelineUser:token
+  username: *************
+prow:
+  hmacToken: local:simonjamesrowe/prow:hmacToken
+sendGrid:
+  apiKey: local:simonjamesrowe/sendGrid:apiKey
+strapi:
+  jwtSigningKey: local:simonjamesrowe/strapi:jwtSigningKey
+: unable to find "htpasswd" in secret at "simonjamesrowe/*****User"
+[31m
+Pipeline failed on stage 'pr-checks' : container 'step-verify-parameters'. The execution of the pipeline has stopped.[0m
