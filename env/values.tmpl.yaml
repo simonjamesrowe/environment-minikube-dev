@@ -296,7 +296,7 @@ sonarqube:
     postgresqlServer: jenkins-x-postgresql
     postgresqlUsername: postgresql
     postgresqlPassword: '{{ .Parameters.mongo.rootPassword }}'
-    postgresqlDatabase: jx
+    postgresqlDatabase: sonarqube
   account:
     adminPassword: '{{ .Parameters.adminUser.password }}'
     currentAdminPassword:  '{{ .Parameters.adminUser.password }}'
