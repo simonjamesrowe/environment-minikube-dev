@@ -1,0 +1,21 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: simonjamesrowe
+    provider: github
+    repository: pact-broker
+  name: simonjamesrowe-pact-broker
+spec:
+  description: Imported application for simonjamesrowe/pact-broker
+  httpCloneURL: https://github.com/simonjamesrowe/pact-broker.git
+  org: simonjamesrowe
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: pact-broker
+  scheduler:
+    kind: ""
+    name: ""
+  url: https://github.com/simonjamesrowe/pact-broker.git

@@ -23,3 +23,9 @@ dependencies:
   url: https://github.com/simonjamesrowe/component-test.git
   version: ""
   versionURL: ""
+- host: github.com
+  owner: simonjamesrowe
+  repo: sonarqube
+  url: https://github.com/simonjamesrowe/sonarqube.git
+  version: ""
+  versionURL: ""
