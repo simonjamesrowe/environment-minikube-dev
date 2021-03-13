@@ -180,6 +180,18 @@
         }
       }
     },
+    "sonarqube": {
+      "type": "object",
+      "required" : ["apiKey"],
+      "properties": {
+        "apiKey": {
+          "type": "string",
+          "format": "password",
+          "title": "Api Key for SonarQube",
+          "description": "Api Key for SonarQube"
+        }
+      }
+    },
     "pactBroker": {
       "type": "object",
       "required" : ["username", "password"],

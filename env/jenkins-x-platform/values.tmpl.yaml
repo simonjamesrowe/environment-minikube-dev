@@ -1640,6 +1640,10 @@ PipelineSecrets:
                     </properties>
                 </profile>
             </profiles>
+            <properties>
+                <sonar.host.url>http://jenkins-x-sonarqube.jx:9000</sonar.host.url>
+                <sonar.login>{{ .Parameters.sonarqube.apiKey }}</sonar.login>
+            </properties>
 
             <activeProfiles>
                 <activeProfile>nexus</activeProfile>

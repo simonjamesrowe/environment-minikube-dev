@@ -28,5 +28,7 @@ prow:
   hmacToken: local:simonjamesrowe/prow:hmacToken
 sendGrid:
   apiKey: local:simonjamesrowe/sendGrid:apiKey
+sonarqube:
+  apiKey: local:simonjamesrowe/sonarqube:apiKey
 strapi:
   jwtSigningKey: local:simonjamesrowe/strapi:jwtSigningKey
