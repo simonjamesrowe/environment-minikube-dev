@@ -1582,6 +1582,16 @@ PipelineSecrets:
 
             <profiles>
                 <profile>
+                  <id>sonar</id>
+                  <activation>
+                      <activeByDefault>true</activeByDefault>
+                  </activation>
+                  <properties>
+                      <sonar.host.url>http://jenkins-x-sonarqube.jx:9000</sonar.host.url>
+                      <sonar.login>{{ .Parameters.sonarqube.apiKey }}</sonar.login>
+                  </properties>
+                </profile>
+                <profile>
                     <id>nexus</id>
                     <properties>
 {{- if and (hasKey .Requirements "repository") (eq .Requirements.repository "bucketrepo") }}
@@ -1640,10 +1650,6 @@ PipelineSecrets:
                     </properties>
                 </profile>
             </profiles>
-            <properties>
-                <sonar.host.url>http://jenkins-x-sonarqube.jx:9000</sonar.host.url>
-                <sonar.login>{{ .Parameters.sonarqube.apiKey }}</sonar.login>
-            </properties>
 
             <activeProfiles>
                 <activeProfile>nexus</activeProfile>
