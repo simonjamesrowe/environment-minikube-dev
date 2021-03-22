@@ -86,6 +86,53 @@ jenkins:
             Command: "/bin/sh -c"
             Args: "cat"
             Tty: true
+      Gradle6-GraalVM-Java11:
+        Name: gradle6-graalvm-java11
+        Label: jenkins-gradle6-graalvm-java11
+        DevPodPorts: 5005, 8080
+        volumes:
+          - type: Secret
+            secretName: jenkins-docker-cfg
+            mountPath: /home/jenkins/.docker
+          - type: Secret
+            secretName: jenkins-release-gpg
+            mountPath: /home/jenkins/.gnupg
+          - type: Secret
+            secretName: jenkins-gradle-init
+            mountPath: /home/jenkins/.gradle
+        EnvVars:
+          JENKINS_URL: http://jenkins:8080
+          GIT_COMMITTER_EMAIL: jenkins-x@googlegroups.com
+          GIT_AUTHOR_EMAIL: jenkins-x@googlegroups.com
+          GIT_AUTHOR_NAME: jenkins-x-bot
+          GIT_COMMITTER_NAME: jenkins-x-bot
+          XDG_CONFIG_HOME: /home/jenkins
+          DOCKER_CONFIG: /home/jenkins/.docker/
+          TESTCONTAINERS_HOST_OVERRIDE: 192.168.4.23
+        ServiceAccount: jenkins
+        # Node labels and tolerations for pod assignment
+        # ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#nodeselector
+        # ref: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+        # NodeSelector:
+        #   dedicated: jenkins-x-builder
+        # Tolerations:
+        # - effect: NoSchedule
+        #   key: dedicated
+        #   operator: Equal
+        #   value: jenkins-x-builder
+        Containers:
+          Gradle6-GraalVM-Java11:
+            Image: harbor.simonjamesrowe.com/simonjamesrowe/gradle6-graalvm-java11:2021-03-21
+            Privileged: true
+            RequestCpu: "2"
+            RequestMemory: "8Gi"
+            LimitCpu: "2"
+            LimitMemory: "8Gi"
+            # You may want to change this to true while testing a new image
+            # AlwaysPullImage: true
+            Command: "/bin/sh -c"
+            Args: "cat"
+            Tty: true
       ## This is temp fix for builder image updates
       aws-cdk:
         Name: aws-cdk
