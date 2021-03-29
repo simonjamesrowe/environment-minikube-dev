@@ -35,8 +35,9 @@ pactBroker:
   password: {{ .Parameters.pactBroker.password }}
 
 elasticsearch:
-  esJavaOpts: -Xmx512m -Xms512m
+  esJavaOpts: -Xmx2g -Xms2g
   replicas: 1
+  clusterHealthCheckParams: "wait_for_status=yellow&timeout=1s"
   volumeClaimTemplate:
     accessModes: [ "ReadWriteOnce" ]
     resources:
@@ -44,11 +45,11 @@ elasticsearch:
         storage: 25Gi
   resources:
     requests:
-      cpu: 500m
-      memory: 512Mi
+      cpu: 1
+      memory: 2Gi
     limits:
-      cpu: 500m
-      memory: 512Mi
+      cpu: 1
+      memory: 2Gi
 kibana:
   resources:
     requests:
