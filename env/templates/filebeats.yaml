@@ -34,13 +34,27 @@ data:
     - type: container
       paths:
         - /var/log/containers/jx-api-gateway*.log
-        - /var/log/containers/jx-search*.log
         - /var/log/containers/jx-start*.log
         - /var/log/containers/jenkins-x-kibana*.log
       exclude_lines: ['DEBUG', 'debug', 'TRACE', 'trace']
       json:
         keys_under_root: true
         message_key: message
+      processors:
+        - add_kubernetes_metadata:
+            host: ${NODE_NAME}
+            matchers:
+            - logs_path:
+                logs_path: "/var/log/containers/"
+    - type: container
+      paths:
+        - /var/log/containers/jx-search*.log
+      exclude_lines: ['DEBUG', 'debug', 'TRACE', 'trace']
+      multiline:
+        type: pattern
+        pattern: '^[[:space:]]'
+        negate: false
+        match: after
       processors:
         - add_kubernetes_metadata:
             host: ${NODE_NAME}

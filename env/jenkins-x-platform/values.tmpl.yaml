@@ -124,10 +124,10 @@ jenkins:
           Gradle6-GraalVM-Java11:
             Image: harbor.simonjamesrowe.com/simonjamesrowe/gradle6-graalvm-java11:2021-03-21
             Privileged: true
-            RequestCpu: "2"
-            RequestMemory: "8Gi"
-            LimitCpu: "2"
-            LimitMemory: "8Gi"
+            RequestCpu: "1"
+            RequestMemory: "6Gi"
+            LimitCpu: "1"
+            LimitMemory: "6Gi"
             # You may want to change this to true while testing a new image
             # AlwaysPullImage: true
             Command: "/bin/sh -c"

@@ -46,6 +46,10 @@ dependencies:
 - name: apm-server
   repository: https://helm.elastic.co
   version: 7.10.0
+- name: apm-server
+  alias: apm-server-jager
+  repository: https://helm.elastic.co
+  version: 7.10.0
 - name: cp-helm-charts
   repository: https://confluentinc.github.io/cp-helm-charts/
   version: 0.6.0
