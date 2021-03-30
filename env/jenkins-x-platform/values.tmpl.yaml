@@ -78,9 +78,9 @@ jenkins:
             Image: harbor.simonjamesrowe.com/simonjamesrowe/gradle6-java11:2020-12-26
             Privileged: true
             RequestCpu: "400m"
-            RequestMemory: "512Mi"
+            RequestMemory: "2Gi"
             LimitCpu: "1"
-            LimitMemory: "1024Mi"
+            LimitMemory: "2Gi"
             # You may want to change this to true while testing a new image
             # AlwaysPullImage: true
             Command: "/bin/sh -c"
