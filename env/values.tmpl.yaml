@@ -184,7 +184,7 @@ gradle:
   properties: |-
     sonar.host.url=http://jenkins-x-sonarqube.jx:9000
     sonar.login={{ .Parameters.sonarqube.apiKey }}
-    org.gradle.jvmargs=-Xmx1g -Xms1g
+    org.gradle.jvmargs=-Xmx2g -Xms1g
 
 octant:
   ingress:
