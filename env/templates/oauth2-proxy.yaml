@@ -82,9 +82,17 @@ spec:
               serviceName: oauth2-proxy
               servicePort: 4180
             path: /oauth2
+    - host: zipkin.simonjamesrowe.com
+      http:
+        paths:
+          - backend:
+              serviceName: oauth2-proxy
+              servicePort: 4180
+            path: /oauth2
   tls:
     - hosts:
         - kibana.simonjamesrowe.com
         - octant.simonjamesrowe.com
         - kafka-magic.simonjamesrowe.com
+        - zipkin.simonjamesrowe.com
       secretName: tls-simonjamesrowe-com-p

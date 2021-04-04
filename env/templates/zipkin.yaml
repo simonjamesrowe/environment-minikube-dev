@@ -1,0 +1,78 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: zipkin
+  labels:
+    app: zipkin
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: zipkin
+    spec:
+      containers:
+        - name: zipkin
+          image: "docker.io/openzipkin/zipkin-slim:2.23"
+          ports:
+            - containerPort: 9411
+          resources:
+            limits:
+              cpu: "300m"
+              memory: "256Mi"
+            requests:
+              cpu: "300m"
+              memory: "256Mi"
+          env:
+            - name: POD_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  apiVersion: v1
+                  fieldPath: metadata.namespace
+            - name: QUERY_PORT
+              value: "9411"
+            - name: JAVA_OPTS
+              value: "-XX:MaxRAMPercentage=75 -server"
+            - name: QUERY_ENABLED
+              value: "true"
+            - name: STORAGE_TYPE
+              value: "elasticsearch"
+            - name: ES_HOSTS
+              value: "elasticsearch-master:9200"
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: zipkin
+  labels:
+    app: zipkin
+spec:
+  type: ClusterIP
+  ports:
+    - port: 9411
+      name: "http"
+      targetPort: 9411
+  selector:
+    app: zipkin
+---
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: zipkin
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/auth-url: "https://$host/oauth2/auth"
+    nginx.ingress.kubernetes.io/auth-signin: "https://$host/oauth2/start?rd=/"
+spec:
+  rules:
+    - host: zipkin.simonjamesrowe.com
+      http:
+        paths:
+          - backend:
+              serviceName: zipkin
+              servicePort: 9411
+            path: /
+  tls:
+    - hosts:
+        - zipkin.simonjamesrowe.com
+      secretName: tls-simonjamesrowe-com-p

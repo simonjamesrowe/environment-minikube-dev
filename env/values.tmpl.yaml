@@ -348,3 +348,4 @@ sonarqube:
   account:
     adminPassword: '{{ .Parameters.adminUser.password }}'
     currentAdminPassword:  '{{ .Parameters.adminUser.password }}'
+
