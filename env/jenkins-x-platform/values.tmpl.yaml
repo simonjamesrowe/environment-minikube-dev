@@ -435,7 +435,7 @@ jenkins:
             RequestMemory: "128Mi"
             Args: '${computer.jnlpmac} ${computer.name}'
           Maven:
-            Image: gcr.io/jenkinsxio/builder-maven-graalvm-java11:2.1.155-777
+            Image: harbor.simonjamesrowe.com/simonjamesrowe/maven-graalvm-java11:2021-04-05
             Privileged: true
             RequestCpu: "2"
             RequestMemory: "8Gi"
