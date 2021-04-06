@@ -33,7 +33,6 @@ data:
                 logs_path: "/var/log/containers/"
     - type: container
       paths:
-        - /var/log/containers/jx-api-gateway*.log
         - /var/log/containers/jx-start*.log
         - /var/log/containers/jenkins-x-kibana*.log
       exclude_lines: ['DEBUG', 'debug', 'TRACE', 'trace']
@@ -48,6 +47,7 @@ data:
                 logs_path: "/var/log/containers/"
     - type: container
       paths:
+        - /var/log/containers/jx-api-gateway*.log
         - /var/log/containers/jx-search*.log
       exclude_lines: ['DEBUG', 'debug', 'TRACE', 'trace']
       multiline:
